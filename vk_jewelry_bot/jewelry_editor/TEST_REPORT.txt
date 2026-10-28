@@ -1,0 +1,9 @@
+Python syntax PASS
+Normalization PASS
+Confirmation required PASS
+Update, id and extra fields preserved PASS
+Stale revision rejected PASS
+New item PASS
+Rename collision rejected PASS
+Backups PASS
+Full bot/MediaPipe/browser integration NOT RUN

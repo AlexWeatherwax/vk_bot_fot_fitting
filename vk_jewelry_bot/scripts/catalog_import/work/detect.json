@@ -1,0 +1,2458 @@
+{
+  "broshi__belaya-strekoza": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 1,
+      "hand_frac": 0.0927,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "broshi__serebryanyy-list": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "diademy__zimnie-yagody-diadema-sergi": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "diademy__rannyaya-osen": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "diademy__techenie": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__zakolka-avtomat-solnechnyy-zaychik": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__groza": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 7,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__leto": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__shpilka-s-imitatsiey-biryuzy": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__shpilka-fibula-vesna": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 1
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__solnechnye-bliki": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__shpilka-s-yashmoy": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "zakolki__yagody": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__lesnoe-leto": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__letnie-yagody": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__zimniy-les": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__snezhnoyagodnik": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__snezhnoyagodnik-bez-podvesov": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__yagody-i-listya": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__yagody-i-shishki": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__rossyp-yagod": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kaffy__morskoy": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "koltsa__osobennoe": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "koltsa__lazurnye-vody": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 1,
+      "hand_frac": 0.4464,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 7,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 1
+    }
+  ],
+  "koltsa__parad-planet": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "koltsa__peski-vremeni": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "koltsa__svet-luny": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony__kulon-plamya": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 7,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 8,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 9,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony__kulon-meditatsiya": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony__kulon-plamya-oseni": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony__kulon-rannyaya-osen": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__amrot": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__vishnevoe-derevo": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__vnutrennyaya-sila": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__groza": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__zimniy-les": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__zolotoe-serdtse": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__zelenaya-yashma": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__iskristyy": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 7,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 8,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 9,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__kole-lesnoy-dozhd": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__kulon-s-krasnoy-yashmoy": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__lavandovyy-led": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__lavanda": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__lesnaya-tropinka": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__moh": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 7,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__nebesnyy-kupol": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__nezhnost": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__obeshchanie": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__predanie": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__snezhnyy-barbaris": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 6,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 7,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__tigr": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__tumannost": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__teplyy-yantar": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__finduilas": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__hmel": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__shelkovye-travy": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "kulony-2__eto-byl-zub": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "nabory__alye-kapli-lesa": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "nabory__ledyanoe-ozero": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 1,
+      "hand_frac": 0.2069,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "nabory__lesnoe-volshebstvo": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "nabory__otgoloski-leta": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "nabory__pervye-luchi-solntsa": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "nabory__rannee-utro": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__laurelome": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__lesnoe-leto": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__letnee-solntse": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__letnee-more": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__noch": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__nezhnye": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 1,
+      "hand_frac": 0.5418,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__priboy": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__rozovyy-led": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 1
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__sergi-s-kapelkami": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__trikvetr": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__yagodnye": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__yasnoe-nebo": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__slozhi-kamushki-drug-na-druga": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 1,
+      "hand_frac": 0.3626,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__sergi-s-labradoritom2": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__sergi-s-agatom": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__sergi-s-nefritom": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__sergi-cherno-zolotye": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__sergi-chernye-kapli": [
+    {
+      "index": 0,
+      "hands": 1,
+      "hand_frac": 0.1929,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 1,
+      "hand_frac": 0.4999,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__pervaya-zelen": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__tsvetenie": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "sergi__morskie": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "braslety__braslet-s-businami-nefrita": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "braslety__trilistniki": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "braslety__asimmetrichnyy-so-steklyannymi-businami": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ],
+  "braslety__kvarts": [
+    {
+      "index": 0,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 1,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 2,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 3,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    },
+    {
+      "index": 4,
+      "hands": 1,
+      "hand_frac": 0.3138,
+      "faces": 0
+    },
+    {
+      "index": 5,
+      "hands": 0,
+      "hand_frac": 0.0,
+      "faces": 0
+    }
+  ]
+}

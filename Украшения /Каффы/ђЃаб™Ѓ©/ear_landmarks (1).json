@@ -1,0 +1,161 @@
+{
+  "image": "synthetic_ear_with_jewelry.png",
+  "image_width": 2048,
+  "image_height": 2048,
+  "coordinate_system": "pixel coordinates, origin top-left, x rightward, y downward",
+  "ear_side": "right",
+  "view": "strict lateral 90 degrees",
+  "landmarks_pixels": {
+    "ear_top": [
+      1052,
+      294
+    ],
+    "ear_bottom": [
+      1026,
+      1658
+    ],
+    "helix_superior": [
+      1070,
+      320
+    ],
+    "helix_posterior_mid": [
+      1212,
+      944
+    ],
+    "helix_inferior": [
+      1218,
+      1662
+    ],
+    "antihelix_superior": [
+      1078,
+      638
+    ],
+    "antihelix_bifurcation": [
+      1058,
+      874
+    ],
+    "concha_center": [
+      1080,
+      1126
+    ],
+    "tragus_tip": [
+      914,
+      1408
+    ],
+    "antitragus_tip": [
+      954,
+      1542
+    ],
+    "intertragic_notch": [
+      906,
+      1602
+    ],
+    "earlobe_center": [
+      976,
+      1758
+    ],
+    "jewelry_attachment_upper": [
+      964,
+      774
+    ],
+    "jewelry_attachment_lower": [
+      1038,
+      1686
+    ],
+    "jewelry_center": [
+      1010,
+      1214
+    ]
+  },
+  "landmarks_normalized": {
+    "ear_top": [
+      0.513923,
+      0.143625
+    ],
+    "ear_bottom": [
+      0.501221,
+      0.809966
+    ],
+    "helix_superior": [
+      0.522716,
+      0.156326
+    ],
+    "helix_posterior_mid": [
+      0.592086,
+      0.461163
+    ],
+    "helix_inferior": [
+      0.595017,
+      0.81192
+    ],
+    "antihelix_superior": [
+      0.526624,
+      0.311676
+    ],
+    "antihelix_bifurcation": [
+      0.516854,
+      0.426966
+    ],
+    "concha_center": [
+      0.527601,
+      0.550073
+    ],
+    "tragus_tip": [
+      0.446507,
+      0.687836
+    ],
+    "antitragus_tip": [
+      0.466048,
+      0.753298
+    ],
+    "intertragic_notch": [
+      0.442599,
+      0.782609
+    ],
+    "earlobe_center": [
+      0.476795,
+      0.858818
+    ],
+    "jewelry_attachment_upper": [
+      0.470933,
+      0.378114
+    ],
+    "jewelry_attachment_lower": [
+      0.507084,
+      0.823644
+    ],
+    "jewelry_center": [
+      0.493405,
+      0.593063
+    ]
+  },
+  "ear_bbox_pixels": [
+    726,
+    296,
+    1262,
+    1856
+  ],
+  "ear_bbox_normalized": [
+    0.354665,
+    0.144602,
+    0.616512,
+    0.906693
+  ],
+  "jewelry_bbox_pixels": [
+    788,
+    497,
+    1291,
+    1566
+  ],
+  "jewelry_bbox_normalized": [
+    0.384954,
+    0.242794,
+    0.630679,
+    0.765022
+  ],
+  "jewelry_attachment_points": [
+    "jewelry_attachment_upper",
+    "jewelry_attachment_lower"
+  ],
+  "notes": "Landmarks estimated on the generated synthetic ear; jewelry mask is soft-edged grayscale."
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "image_file": "synthetic_ear_with_jewelry.png",
+  "image_size": {
+    "width": 2048,
+    "height": 2048
+  },
+  "coordinate_system": {
+    "origin": "top-left",
+    "x_direction": "right",
+    "y_direction": "down",
+    "units": "pixels"
+  },
+  "landmarks": {
+    "ear_top": {
+      "x": 1457,
+      "y": 1043,
+      "x_normalized": 0.711426,
+      "y_normalized": 0.509277
+    },
+    "ear_bottom": {
+      "x": 1488,
+      "y": 1397,
+      "x_normalized": 0.726562,
+      "y_normalized": 0.682129
+    },
+    "helix_superior": {
+      "x": 1340,
+      "y": 690,
+      "x_normalized": 0.654297,
+      "y_normalized": 0.336914
+    },
+    "helix_posterior_mid": {
+      "x": 1454,
+      "y": 896,
+      "x_normalized": 0.709961,
+      "y_normalized": 0.4375
+    },
+    "helix_inferior": {
+      "x": 1557,
+      "y": 1236,
+      "x_normalized": 0.760254,
+      "y_normalized": 0.603516
+    },
+    "antihelix_superior": {
+      "x": 1368,
+      "y": 767,
+      "x_normalized": 0.667969,
+      "y_normalized": 0.374512
+    },
+    "antihelix_bifurcation": {
+      "x": 1445,
+      "y": 915,
+      "x_normalized": 0.705566,
+      "y_normalized": 0.446777
+    },
+    "concha_center": {
+      "x": 1371,
+      "y": 991,
+      "x_normalized": 0.669434,
+      "y_normalized": 0.483887
+    },
+    "tragus_tip": {
+      "x": 1478,
+      "y": 1110,
+      "x_normalized": 0.72168,
+      "y_normalized": 0.541992
+    },
+    "antitragus_tip": {
+      "x": 1444,
+      "y": 1208,
+      "x_normalized": 0.705078,
+      "y_normalized": 0.589844
+    },
+    "intertragic_notch": {
+      "x": 1436,
+      "y": 1255,
+      "x_normalized": 0.701172,
+      "y_normalized": 0.612793
+    },
+    "earlobe_center": {
+      "x": 1495,
+      "y": 1390,
+      "x_normalized": 0.72998,
+      "y_normalized": 0.678711
+    },
+    "jewelry_attachment_upper": {
+      "x": 1526,
+      "y": 703,
+      "x_normalized": 0.745117,
+      "y_normalized": 0.343262
+    },
+    "jewelry_attachment_lower": {
+      "x": 1347,
+      "y": 1091,
+      "x_normalized": 0.657715,
+      "y_normalized": 0.532715
+    },
+    "jewelry_center": {
+      "x": 1486,
+      "y": 1190,
+      "x_normalized": 0.725586,
+      "y_normalized": 0.581055
+    }
+  },
+  "bounding_boxes": {
+    "jewelry_bbox": {
+      "xmin": 1315,
+      "ymin": 644,
+      "xmax": 1776,
+      "ymax": 1516,
+      "normalized": [
+        0.64209,
+        0.314453,
+        0.867188,
+        0.740234
+      ]
+    },
+    "ear_bbox": {
+      "xmin": 1288,
+      "ymin": 598,
+      "xmax": 1752,
+      "ymax": 1408,
+      "normalized": [
+        0.628906,
+        0.291992,
+        0.855469,
+        0.6875
+      ]
+    }
+  },
+  "notes": "Coordinates refer to the 2048x2048 synthetic composite. Attachment points denote visible upper and lower jewelry-to-ear contact/retention locations."
+}

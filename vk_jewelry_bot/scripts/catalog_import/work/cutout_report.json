@@ -1,0 +1,1234 @@
+[
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/brooch/belaya-strekoza.png",
+    "size": [
+      1114,
+      621
+    ],
+    "fill": 0.242,
+    "key": "broshi__belaya-strekoza",
+    "section": "Броши",
+    "title": "Белая стрекоза",
+    "category": "brooch",
+    "chosen": 4
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/brooch/serebryanyy-list.png",
+    "size": [
+      738,
+      942
+    ],
+    "fill": 0.387,
+    "key": "broshi__serebryanyy-list",
+    "section": "Броши",
+    "title": "Серебряный лист",
+    "category": "brooch",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/diadem/zimnie-yagody-diadema-sergi.png",
+    "size": [
+      800,
+      340
+    ],
+    "fill": 0.258,
+    "key": "diademy__zimnie-yagody-diadema-sergi",
+    "section": "Диадемы",
+    "title": "Зимние ягоды диадема+серьги",
+    "category": "diadem",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/diadem/rannyaya-osen.png",
+    "size": [
+      1016,
+      338
+    ],
+    "fill": 0.129,
+    "key": "diademy__rannyaya-osen",
+    "section": "Диадемы",
+    "title": "Ранняя осень",
+    "category": "diadem",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/diadem/techenie.png",
+    "size": [
+      1042,
+      401
+    ],
+    "fill": 0.147,
+    "key": "diademy__techenie",
+    "section": "Диадемы",
+    "title": "Течение",
+    "category": "diadem",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/zakolka-avtomat-solnechnyy-zaychik.png",
+    "size": [
+      699,
+      449
+    ],
+    "fill": 0.434,
+    "key": "zakolki__zakolka-avtomat-solnechnyy-zaychik",
+    "section": "Заколки",
+    "title": "заколка-автомат Солнечный зайчик",
+    "category": "hairpin",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/groza.png",
+    "size": [
+      407,
+      231
+    ],
+    "fill": 0.707,
+    "key": "zakolki__groza",
+    "section": "Заколки",
+    "title": "Гроза",
+    "category": "hairpin",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/leto.png",
+    "size": [
+      535,
+      817
+    ],
+    "fill": 0.551,
+    "key": "zakolki__leto",
+    "section": "Заколки",
+    "title": "Лето",
+    "category": "hairpin",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/shpilka-s-imitatsiey-biryuzy.png",
+    "size": [
+      982,
+      429
+    ],
+    "fill": 0.087,
+    "key": "zakolki__shpilka-s-imitatsiey-biryuzy",
+    "section": "Заколки",
+    "title": "Шпилька с имитацией бирюзы",
+    "category": "hairpin",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/shpilka-fibula-vesna.png",
+    "size": [
+      1390,
+      748
+    ],
+    "fill": 0.385,
+    "key": "zakolki__shpilka-fibula-vesna",
+    "section": "Заколки",
+    "title": "Шпилька-фибула Весна",
+    "category": "hairpin",
+    "chosen": 5
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/solnechnye-bliki.png",
+    "size": [
+      325,
+      354
+    ],
+    "fill": 0.564,
+    "key": "zakolki__solnechnye-bliki",
+    "section": "Заколки",
+    "title": "солнечные блики",
+    "category": "hairpin",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/shpilka-s-yashmoy.png",
+    "size": [
+      391,
+      472
+    ],
+    "fill": 0.612,
+    "key": "zakolki__shpilka-s-yashmoy",
+    "section": "Заколки",
+    "title": "шпилька с яшмой",
+    "category": "hairpin",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/hairpin/yagody.png",
+    "size": [
+      444,
+      844
+    ],
+    "fill": 0.514,
+    "key": "zakolki__yagody",
+    "section": "Заколки",
+    "title": "ягоды",
+    "category": "hairpin",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/lesnoe-leto.png",
+    "size": [
+      626,
+      546
+    ],
+    "fill": 0.537,
+    "key": "kaffy__lesnoe-leto",
+    "section": "Каффы",
+    "title": "лесное лето",
+    "category": "kaffy",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/letnie-yagody.png",
+    "size": [
+      540,
+      646
+    ],
+    "fill": 0.568,
+    "key": "kaffy__letnie-yagody",
+    "section": "Каффы",
+    "title": "летние ягоды",
+    "category": "kaffy",
+    "chosen": 5
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/zimniy-les.png",
+    "size": [
+      582,
+      495
+    ],
+    "fill": 0.566,
+    "key": "kaffy__zimniy-les",
+    "section": "Каффы",
+    "title": "Зимний лес",
+    "category": "kaffy",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/snezhnoyagodnik.png",
+    "size": [
+      558,
+      1067
+    ],
+    "fill": 0.349,
+    "key": "kaffy__snezhnoyagodnik",
+    "section": "Каффы",
+    "title": "Снежноягодник",
+    "category": "kaffy",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/snezhnoyagodnik-bez-podvesov.png",
+    "size": [
+      748,
+      775
+    ],
+    "fill": 0.432,
+    "key": "kaffy__snezhnoyagodnik-bez-podvesov",
+    "section": "Каффы",
+    "title": "Снежноягодник без подвесов",
+    "category": "kaffy",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/yagody-i-listya.png",
+    "size": [
+      551,
+      550
+    ],
+    "fill": 0.228,
+    "key": "kaffy__yagody-i-listya",
+    "section": "Каффы",
+    "title": "Ягоды и листья",
+    "category": "kaffy",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/yagody-i-shishki.png",
+    "size": [
+      725,
+      1005
+    ],
+    "fill": 0.337,
+    "key": "kaffy__yagody-i-shishki",
+    "section": "Каффы",
+    "title": "Ягоды и шишки",
+    "category": "kaffy",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/rossyp-yagod.png",
+    "size": [
+      534,
+      513
+    ],
+    "fill": 0.474,
+    "key": "kaffy__rossyp-yagod",
+    "section": "Каффы",
+    "title": "россыпь ягод",
+    "category": "kaffy",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/kaffy/morskoy.png",
+    "size": [
+      491,
+      1048
+    ],
+    "fill": 0.363,
+    "key": "kaffy__morskoy",
+    "section": "Каффы",
+    "title": "морской",
+    "category": "kaffy",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/ring/osobennoe.png",
+    "size": [
+      177,
+      195
+    ],
+    "fill": 0.695,
+    "key": "koltsa__osobennoe",
+    "section": "Кольца",
+    "title": "особенное",
+    "category": "ring",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/ring/lazurnye-vody.png",
+    "size": [
+      217,
+      254
+    ],
+    "fill": 0.553,
+    "key": "koltsa__lazurnye-vody",
+    "section": "Кольца",
+    "title": "Лазурные воды",
+    "category": "ring",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/ring/parad-planet.png",
+    "size": [
+      214,
+      209
+    ],
+    "fill": 0.557,
+    "key": "koltsa__parad-planet",
+    "section": "Кольца",
+    "title": "Парад планет",
+    "category": "ring",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/ring/peski-vremeni.png",
+    "size": [
+      211,
+      135
+    ],
+    "fill": 0.72,
+    "key": "koltsa__peski-vremeni",
+    "section": "Кольца",
+    "title": "Пески времени",
+    "category": "ring",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/ring/svet-luny.png",
+    "size": [
+      297,
+      347
+    ],
+    "fill": 0.523,
+    "key": "koltsa__svet-luny",
+    "section": "Кольца",
+    "title": "Свет луны",
+    "category": "ring",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/kulon-plamya.png",
+    "size": [
+      485,
+      581
+    ],
+    "fill": 0.619,
+    "key": "kulony__kulon-plamya",
+    "section": "Кулоны",
+    "title": "Кулон Пламя",
+    "category": "pendant",
+    "chosen": 8
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/kulon-meditatsiya.png",
+    "size": [
+      299,
+      386
+    ],
+    "fill": 0.681,
+    "key": "kulony__kulon-meditatsiya",
+    "section": "Кулоны",
+    "title": "Кулон Медитация",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/kulon-plamya-oseni.png",
+    "size": [
+      189,
+      271
+    ],
+    "fill": 0.604,
+    "key": "kulony__kulon-plamya-oseni",
+    "section": "Кулоны",
+    "title": "кулон Пламя осени",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/kulon-rannyaya-osen.png",
+    "size": [
+      342,
+      576
+    ],
+    "fill": 0.664,
+    "key": "kulony__kulon-rannyaya-osen",
+    "section": "Кулоны",
+    "title": "кулон Ранняя осень",
+    "category": "pendant",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/amrot.png",
+    "size": [
+      356,
+      814
+    ],
+    "fill": 0.603,
+    "key": "kulony-2__amrot",
+    "section": "Кулоны 2",
+    "title": "Амрот",
+    "category": "pendant",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/vishnevoe-derevo.png",
+    "size": [
+      330,
+      494
+    ],
+    "fill": 0.447,
+    "key": "kulony-2__vishnevoe-derevo",
+    "section": "Кулоны 2",
+    "title": "Вишневое дерево",
+    "category": "pendant",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/vnutrennyaya-sila.png",
+    "size": [
+      142,
+      585
+    ],
+    "fill": 0.699,
+    "key": "kulony-2__vnutrennyaya-sila",
+    "section": "Кулоны 2",
+    "title": "Внутренняя сила",
+    "category": "pendant",
+    "chosen": 5
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/groza.png",
+    "size": [
+      297,
+      299
+    ],
+    "fill": 0.714,
+    "key": "kulony-2__groza",
+    "section": "Кулоны 2",
+    "title": "Гроза",
+    "category": "pendant",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/zimniy-les.png",
+    "size": [
+      214,
+      308
+    ],
+    "fill": 0.4,
+    "key": "kulony-2__zimniy-les",
+    "section": "Кулоны 2",
+    "title": "Зимний лес",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/zolotoe-serdtse.png",
+    "size": [
+      319,
+      706
+    ],
+    "fill": 0.291,
+    "key": "kulony-2__zolotoe-serdtse",
+    "section": "Кулоны 2",
+    "title": "Золотое сердце",
+    "category": "pendant",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/zelenaya-yashma.png",
+    "size": [
+      497,
+      560
+    ],
+    "fill": 0.531,
+    "key": "kulony-2__zelenaya-yashma",
+    "section": "Кулоны 2",
+    "title": "Зеленая яшма",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/iskristyy.png",
+    "size": [
+      589,
+      280
+    ],
+    "fill": 0.635,
+    "key": "kulony-2__iskristyy",
+    "section": "Кулоны 2",
+    "title": "Искристый",
+    "category": "pendant",
+    "chosen": 8
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/beads/kole-lesnoy-dozhd.png",
+    "size": [
+      1136,
+      1400
+    ],
+    "fill": 0.225,
+    "key": "kulony-2__kole-lesnoy-dozhd",
+    "section": "Кулоны 2",
+    "title": "Колье лесной дождь",
+    "category": "beads",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/kulon-s-krasnoy-yashmoy.png",
+    "size": [
+      347,
+      794
+    ],
+    "fill": 0.715,
+    "key": "kulony-2__kulon-s-krasnoy-yashmoy",
+    "section": "Кулоны 2",
+    "title": "Кулон с красной яшмой",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/lavandovyy-led.png",
+    "size": [
+      285,
+      586
+    ],
+    "fill": 0.473,
+    "key": "kulony-2__lavandovyy-led",
+    "section": "Кулоны 2",
+    "title": "Лавандовый лёд",
+    "category": "pendant",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/lavanda.png",
+    "size": [
+      337,
+      395
+    ],
+    "fill": 0.666,
+    "key": "kulony-2__lavanda",
+    "section": "Кулоны 2",
+    "title": "Лаванда",
+    "category": "pendant",
+    "chosen": 4
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/lesnaya-tropinka.png",
+    "size": [
+      254,
+      425
+    ],
+    "fill": 0.594,
+    "key": "kulony-2__lesnaya-tropinka",
+    "section": "Кулоны 2",
+    "title": "Лесная тропинка",
+    "category": "pendant",
+    "chosen": 4
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/moh.png",
+    "size": [
+      408,
+      817
+    ],
+    "fill": 0.579,
+    "key": "kulony-2__moh",
+    "section": "Кулоны 2",
+    "title": "Мох",
+    "category": "pendant",
+    "chosen": 6
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/nebesnyy-kupol.png",
+    "size": [
+      312,
+      522
+    ],
+    "fill": 0.609,
+    "key": "kulony-2__nebesnyy-kupol",
+    "section": "Кулоны 2",
+    "title": "Небесный купол",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/nezhnost.png",
+    "size": [
+      507,
+      477
+    ],
+    "fill": 0.701,
+    "key": "kulony-2__nezhnost",
+    "section": "Кулоны 2",
+    "title": "Нежность",
+    "category": "pendant",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/obeshchanie.png",
+    "size": [
+      450,
+      775
+    ],
+    "fill": 0.455,
+    "key": "kulony-2__obeshchanie",
+    "section": "Кулоны 2",
+    "title": "Обещание",
+    "category": "pendant",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/predanie.png",
+    "size": [
+      202,
+      352
+    ],
+    "fill": 0.69,
+    "key": "kulony-2__predanie",
+    "section": "Кулоны 2",
+    "title": "Предание",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/snezhnyy-barbaris.png",
+    "size": [
+      597,
+      837
+    ],
+    "fill": 0.614,
+    "key": "kulony-2__snezhnyy-barbaris",
+    "section": "Кулоны 2",
+    "title": "Снежный барбарис",
+    "category": "pendant",
+    "chosen": 6
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/tigr.png",
+    "size": [
+      815,
+      439
+    ],
+    "fill": 0.569,
+    "key": "kulony-2__tigr",
+    "section": "Кулоны 2",
+    "title": "Тигр",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/tumannost.png",
+    "size": [
+      204,
+      388
+    ],
+    "fill": 0.544,
+    "key": "kulony-2__tumannost",
+    "section": "Кулоны 2",
+    "title": "Туманность",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/teplyy-yantar.png",
+    "size": [
+      476,
+      286
+    ],
+    "fill": 0.617,
+    "key": "kulony-2__teplyy-yantar",
+    "section": "Кулоны 2",
+    "title": "Теплый янтарь",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/finduilas.png",
+    "size": [
+      471,
+      777
+    ],
+    "fill": 0.574,
+    "key": "kulony-2__finduilas",
+    "section": "Кулоны 2",
+    "title": "Финдуилас",
+    "category": "pendant",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/hmel.png",
+    "size": [
+      396,
+      443
+    ],
+    "fill": 0.681,
+    "key": "kulony-2__hmel",
+    "section": "Кулоны 2",
+    "title": "Хмель",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/shelkovye-travy.png",
+    "size": [
+      174,
+      678
+    ],
+    "fill": 0.53,
+    "key": "kulony-2__shelkovye-travy",
+    "section": "Кулоны 2",
+    "title": "Шелковые травы",
+    "category": "pendant",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/pendant/eto-byl-zub.png",
+    "size": [
+      57,
+      114
+    ],
+    "fill": 0.74,
+    "key": "kulony-2__eto-byl-zub",
+    "section": "Кулоны 2",
+    "title": "Это был зуб",
+    "category": "pendant",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/_без_категории/alye-kapli-lesa.png",
+    "size": [
+      441,
+      1400
+    ],
+    "fill": 0.539,
+    "key": "nabory__alye-kapli-lesa",
+    "section": "Наборы",
+    "title": "Алые капли леса",
+    "category": null,
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/_без_категории/ledyanoe-ozero.png",
+    "size": [
+      669,
+      1275
+    ],
+    "fill": 0.39,
+    "key": "nabory__ledyanoe-ozero",
+    "section": "Наборы",
+    "title": "Ледяное озеро",
+    "category": null,
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/_без_категории/lesnoe-volshebstvo.png",
+    "size": [
+      1234,
+      1400
+    ],
+    "fill": 0.177,
+    "key": "nabory__lesnoe-volshebstvo",
+    "section": "Наборы",
+    "title": "Лесное волшебство",
+    "category": null,
+    "chosen": 4
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/_без_категории/otgoloski-leta.png",
+    "size": [
+      1400,
+      726
+    ],
+    "fill": 0.116,
+    "key": "nabory__otgoloski-leta",
+    "section": "Наборы",
+    "title": "Отголоски лета",
+    "category": null,
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/_без_категории/pervye-luchi-solntsa.png",
+    "size": [
+      984,
+      1133
+    ],
+    "fill": 0.124,
+    "key": "nabory__pervye-luchi-solntsa",
+    "section": "Наборы",
+    "title": "Первые лучи солнца",
+    "category": null,
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/_без_категории/rannee-utro.png",
+    "size": [
+      794,
+      739
+    ],
+    "fill": 0.052,
+    "key": "nabory__rannee-utro",
+    "section": "Наборы",
+    "title": "Раннее утро",
+    "category": null,
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/laurelome.png",
+    "size": [
+      290,
+      759
+    ],
+    "fill": 0.386,
+    "key": "sergi__laurelome",
+    "section": "Серьги",
+    "title": "Лауреломэ",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/lesnoe-leto.png",
+    "size": [
+      722,
+      1327
+    ],
+    "fill": 0.323,
+    "key": "sergi__lesnoe-leto",
+    "section": "Серьги",
+    "title": "Лесное лето",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/letnee-solntse.png",
+    "size": [
+      617,
+      1400
+    ],
+    "fill": 0.375,
+    "key": "sergi__letnee-solntse",
+    "section": "Серьги",
+    "title": "Летнее солнце",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/letnee-more.png",
+    "size": [
+      492,
+      1400
+    ],
+    "fill": 0.531,
+    "key": "sergi__letnee-more",
+    "section": "Серьги",
+    "title": "Летнее море",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/noch.png",
+    "size": [
+      948,
+      1400
+    ],
+    "fill": 0.305,
+    "key": "sergi__noch",
+    "section": "Серьги",
+    "title": "Ночь",
+    "category": "earrings",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/nezhnye.png",
+    "size": [
+      558,
+      1400
+    ],
+    "fill": 0.375,
+    "key": "sergi__nezhnye",
+    "section": "Серьги",
+    "title": "Нежные",
+    "category": "earrings",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/priboy.png",
+    "size": [
+      788,
+      1400
+    ],
+    "fill": 0.453,
+    "key": "sergi__priboy",
+    "section": "Серьги",
+    "title": "Прибой",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/rozovyy-led.png",
+    "size": [
+      871,
+      691
+    ],
+    "fill": 0.149,
+    "key": "sergi__rozovyy-led",
+    "section": "Серьги",
+    "title": "Розовый лед",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/sergi-s-kapelkami.png",
+    "size": [
+      298,
+      793
+    ],
+    "fill": 0.424,
+    "key": "sergi__sergi-s-kapelkami",
+    "section": "Серьги",
+    "title": "Серьги с капельками",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/trikvetr.png",
+    "size": [
+      649,
+      1030
+    ],
+    "fill": 0.237,
+    "key": "sergi__trikvetr",
+    "section": "Серьги",
+    "title": "Трикветр",
+    "category": "earrings",
+    "chosen": 4
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/yagodnye.png",
+    "size": [
+      176,
+      177
+    ],
+    "fill": 0.45,
+    "key": "sergi__yagodnye",
+    "section": "Серьги",
+    "title": "Ягодные",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/yasnoe-nebo.png",
+    "size": [
+      447,
+      865
+    ],
+    "fill": 0.339,
+    "key": "sergi__yasnoe-nebo",
+    "section": "Серьги",
+    "title": "Ясное небо",
+    "category": "earrings",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/slozhi-kamushki-drug-na-druga.png",
+    "size": [
+      205,
+      447
+    ],
+    "fill": 0.364,
+    "key": "sergi__slozhi-kamushki-drug-na-druga",
+    "section": "Серьги",
+    "title": "сложи камушки друг на друга",
+    "category": "earrings",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/sergi-s-labradoritom2.png",
+    "size": [
+      276,
+      483
+    ],
+    "fill": 0.23,
+    "key": "sergi__sergi-s-labradoritom2",
+    "section": "Серьги",
+    "title": "серьги с лабрадоритом2",
+    "category": "earrings",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/sergi-s-agatom.png",
+    "size": [
+      346,
+      1074
+    ],
+    "fill": 0.324,
+    "key": "sergi__sergi-s-agatom",
+    "section": "Серьги",
+    "title": "серьги с агатом",
+    "category": "earrings",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/sergi-s-nefritom.png",
+    "size": [
+      629,
+      1071
+    ],
+    "fill": 0.261,
+    "key": "sergi__sergi-s-nefritom",
+    "section": "Серьги",
+    "title": "серьги с нефритом",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/sergi-cherno-zolotye.png",
+    "size": [
+      217,
+      460
+    ],
+    "fill": 0.167,
+    "key": "sergi__sergi-cherno-zolotye",
+    "section": "Серьги",
+    "title": "серьги чёрно-золотые",
+    "category": "earrings",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/sergi-chernye-kapli.png",
+    "size": [
+      283,
+      612
+    ],
+    "fill": 0.228,
+    "key": "sergi__sergi-chernye-kapli",
+    "section": "Серьги",
+    "title": "серьги чёрные капли",
+    "category": "earrings",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/pervaya-zelen.png",
+    "size": [
+      418,
+      822
+    ],
+    "fill": 0.268,
+    "key": "sergi__pervaya-zelen",
+    "section": "Серьги",
+    "title": "первая зелень",
+    "category": "earrings",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/tsvetenie.png",
+    "size": [
+      479,
+      983
+    ],
+    "fill": 0.308,
+    "key": "sergi__tsvetenie",
+    "section": "Серьги",
+    "title": "цветение",
+    "category": "earrings",
+    "chosen": 3
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/earrings/morskie.png",
+    "size": [
+      605,
+      1225
+    ],
+    "fill": 0.307,
+    "key": "sergi__morskie",
+    "section": "Серьги",
+    "title": "морские",
+    "category": "earrings",
+    "chosen": 0
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/bracelet/braslet-s-businami-nefrita.png",
+    "size": [
+      185,
+      990
+    ],
+    "fill": 0.266,
+    "key": "braslety__braslet-s-businami-nefrita",
+    "section": "браслеты",
+    "title": "браслет с бусинами нефрита",
+    "category": "bracelet",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/bracelet/trilistniki.png",
+    "size": [
+      513,
+      165
+    ],
+    "fill": 0.362,
+    "key": "braslety__trilistniki",
+    "section": "браслеты",
+    "title": "Трилистники",
+    "category": "bracelet",
+    "chosen": 1
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/bracelet/asimmetrichnyy-so-steklyannymi-businami.png",
+    "size": [
+      511,
+      307
+    ],
+    "fill": 0.389,
+    "key": "braslety__asimmetrichnyy-so-steklyannymi-businami",
+    "section": "браслеты",
+    "title": "асимметричный со стеклянными бусинами",
+    "category": "bracelet",
+    "chosen": 2
+  },
+  {
+    "ok": true,
+    "path": "/Users/vasileva.aa/проверки клода/Чат вк/vk_jewelry_bot/scripts/catalog_import/work/cutout/bracelet/kvarts.png",
+    "size": [
+      460,
+      620
+    ],
+    "fill": 0.22,
+    "key": "braslety__kvarts",
+    "section": "браслеты",
+    "title": "кварц",
+    "category": "bracelet",
+    "chosen": 4
+  }
+]

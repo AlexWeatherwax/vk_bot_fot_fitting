@@ -1,0 +1,28 @@
+
+[Unit]
+Description=VK Jewelry Try-On Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Замените на пользователя, под которым лежит проект на сервере (не root!)
+User=botuser
+Group=botuser
+
+WorkingDirectory=/opt/vk_jewelry_bot
+EnvironmentFile=/opt/vk_jewelry_bot/.env
+ExecStart=/opt/vk_jewelry_bot/venv/bin/python /opt/vk_jewelry_bot/run.py
+
+Restart=always
+RestartSec=5
+
+# Небольшое ужесточение по умолчанию — не мешает работе бота
+NoNewPrivileges=true
+PrivateTmp=true
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

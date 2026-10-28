@@ -1,0 +1,16 @@
+[Unit]
+Description=Jewelry author editor
+After=network.target
+[Service]
+User=jewelry
+Group=jewelry
+WorkingDirectory=/opt/vk_jewelry_bot
+EnvironmentFile=/etc/jewelry-editor.env
+ExecStart=/opt/vk_jewelry_bot/.venv/bin/python -m uvicorn jewelry_editor.app:app --host 127.0.0.1 --port 8765 --workers 1
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
