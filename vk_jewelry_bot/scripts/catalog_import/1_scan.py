@@ -1,5 +1,5 @@
 """
-Шаг 1 — собрать список товаров из локальной папки «Украшения».
+Шаг 1 — собрать список товаров из assets/source_photos/ или JEWELRY_SOURCE_DIR.
 
 Каждая подпапка нижнего уровня = один товар, внутри — несколько фото
 одного и того же украшения. Результат — work/items.json.
@@ -14,6 +14,12 @@ IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 
 
 def main() -> None:
+    if not SOURCE_DIR.is_dir():
+        raise SystemExit(
+            f"Не найдена папка исходных фотографий: {SOURCE_DIR}\n"
+            "Поместите архив в assets/source_photos/ в корне репозитория "
+            "или задайте путь переменной JEWELRY_SOURCE_DIR."
+        )
     items = []
     skipped_empty = []
     for folder in sorted(SOURCE_DIR.iterdir()):

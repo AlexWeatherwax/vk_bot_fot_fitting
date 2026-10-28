@@ -6,4 +6,3 @@ services:
     volumes:
       # чтобы можно было добавлять/менять украшения без пересборки образа
       - ./bot/jewelry/gallery:/app/bot/jewelry/gallery
-      - ./data/tmp:/app/data/tmp

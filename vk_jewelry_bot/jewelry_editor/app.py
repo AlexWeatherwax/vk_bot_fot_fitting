@@ -1,6 +1,5 @@
 import asyncio, base64, binascii, hashlib, io, json, logging, math, os, secrets, threading, time, unicodedata, uuid, fcntl, tempfile
 from contextlib import ExitStack
-from dataclasses import fields as dataclass_fields
 from pathlib import Path
 from typing import Literal
 from unittest.mock import patch
