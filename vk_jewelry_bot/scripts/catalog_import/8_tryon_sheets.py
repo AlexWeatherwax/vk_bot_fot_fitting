@@ -12,21 +12,21 @@ scale — anchor_scale, dx/dy — offset_x/offset_y, rot — rotation_offset.
 
 Запускать окружением с mediapipe, из корня проекта:
 
-    .venv-mp/bin/python scripts/catalog_import/8_tryon_sheets.py
-    .venv-mp/bin/python scripts/catalog_import/8_tryon_sheets.py earrings ring
+    ../.venv-mp/bin/python scripts/catalog_import/8_tryon_sheets.py
+    ../.venv-mp/bin/python scripts/catalog_import/8_tryon_sheets.py earrings ring
 """
 from __future__ import annotations
 
 import io
 import math
 import sys
-from pathlib import Path
 
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+from paths import CALIBRATION_DIR, PROJECT_ROOT, WORK_DIR
+
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from bot.jewelry.catalog import catalog                      # noqa: E402
@@ -36,8 +36,8 @@ from bot.tryon import landmarks_hand as hand_mod             # noqa: E402
 from bot.tryon import landmarks_pose as pose_mod             # noqa: E402
 from bot.tryon.pipeline import TryOnError, apply_tryon       # noqa: E402
 
-PHOTO_DIR = PROJECT_ROOT / "фото для калибровки"
-OUT_DIR = Path(__file__).resolve().parent / "work" / "tryon_sheets"
+PHOTO_DIR = CALIBRATION_DIR
+OUT_DIR = WORK_DIR / "tryon_sheets"
 FONT_PATH = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"
 
 # Какое пробное фото и какую часть тела показывать для каждой категории.

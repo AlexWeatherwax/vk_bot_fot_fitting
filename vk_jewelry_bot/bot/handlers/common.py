@@ -20,12 +20,14 @@ WELCOME = (
 
 @common_labeler.message(text=["начать", "старт", "start", "привет", "hello"])
 async def start_handler(message: Message):
+    catalog.reload_if_changed()
     example = catalog.items[0].name if catalog.items else "Кольцо Роза"
     await message.answer(WELCOME.format(example=example))
 
 
 @common_labeler.message(text=["каталог", "список", "help", "помощь"])
 async def catalog_list_handler(message: Message):
+    catalog.reload_if_changed()
     if not catalog.items:
         await message.answer("Каталог пока пуст.")
         return

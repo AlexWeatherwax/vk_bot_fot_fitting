@@ -5,29 +5,29 @@
 какую часть кадра занимает украшение, поэтому поля anchor_scale/offset_*
 приходится подбирать заново. Этот скрипт показывает, что получилось.
 
-Запускать окружением с mediapipe (.venv-mp), из корня проекта:
+Запускать окружением с mediapipe (.venv-mp), из папки vk_jewelry_bot:
 
-    ../../../.venv-mp/bin/python scripts/catalog_import/7_calibrate_preview.py earrings pendant
-    ../../../.venv-mp/bin/python scripts/catalog_import/7_calibrate_preview.py --id imladris_ring_koltso-svet-luny
+    ../.venv-mp/bin/python scripts/catalog_import/7_calibrate_preview.py earrings pendant
+    ../.venv-mp/bin/python scripts/catalog_import/7_calibrate_preview.py --id imladris_ring_koltso-svet-luny
 
 Без аргументов берёт по одному товару каждой категории.
 """
 from __future__ import annotations
 
 import sys
-from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+from paths import CALIBRATION_DIR, PROJECT_ROOT, WORK_DIR
+
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from bot.jewelry.catalog import catalog                     # noqa: E402
 from bot.jewelry.models import Category                     # noqa: E402
 from bot.tryon.pipeline import TryOnError, apply_tryon      # noqa: E402
 
-PHOTO_DIR = PROJECT_ROOT / "фото для калибровки"
-OUT_DIR = Path(__file__).resolve().parent / "work" / "calibrate"
+PHOTO_DIR = CALIBRATION_DIR
+OUT_DIR = WORK_DIR / "calibrate"
 FONT_PATH = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"
 
 # Какое калибровочное фото осмысленно для какой категории.

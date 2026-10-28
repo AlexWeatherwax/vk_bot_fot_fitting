@@ -1,4 +1,39 @@
-/.DS_Store
-/.venv-import
-/.venv-mp
+# Operating-system files and Python caches
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+.venv/
+.venv-*/
+venv/
+node_modules/
+
+# Reproducible import results and local VK polling state
+/vk_jewelry_bot/.vkbottle/
+/vk_jewelry_bot/data/tmp/
+/vk_jewelry_bot/scripts/catalog_import/work/
+/vk_jewelry_bot/scripts/imladris_import/raw/
+/vk_jewelry_bot/scripts/imladris_import/cutout/
+/vk_jewelry_bot/scripts/imladris_import/raw_manifest.json
+/vk_jewelry_bot/scripts/imladris_import/cutout_report.json
+/vk_jewelry_bot/scripts/imladris_import/final_catalog_summary.json
+*.ses
+
+# Editor drafts and backups; published gallery images remain versioned
+.editor-staging/
+.editor-backups/
+.editor.lock
+.manifest-*
+
+# Standalone web-catalog data
+/tools/larets-server/data/
+
+# Existing local archive that was excluded before this cleanup
 /дЃвЃ г™а†и•≠®© Ґ ™†в†ЂЃ£•

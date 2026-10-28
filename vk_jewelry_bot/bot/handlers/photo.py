@@ -25,6 +25,7 @@ async def photo_handler(message: Message):
 
     state = await bot.state_dispenser.get(message.peer_id)
     item_id = state.payload.get("item_id") if state else None
+    catalog.reload_if_changed()
     item = next((i for i in catalog.items if i.id == item_id), None)
 
     if item is None:

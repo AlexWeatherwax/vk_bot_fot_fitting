@@ -12,7 +12,7 @@ Group=botuser
 
 WorkingDirectory=/opt/vk_jewelry_bot
 EnvironmentFile=/opt/vk_jewelry_bot/.env
-ExecStart=/opt/vk_jewelry_bot/venv/bin/python /opt/vk_jewelry_bot/run.py
+ExecStart=/opt/vk_jewelry_bot/.venv/bin/python /opt/vk_jewelry_bot/run.py
 
 Restart=always
 RestartSec=5

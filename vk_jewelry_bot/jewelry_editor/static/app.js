@@ -16,7 +16,17 @@ function draw(handles=null){if(!picture)return;ctx.clearRect(0,0,canvas.width,ca
 async function preview(){clearTimeout(timer);if(!asset)return;const v=version,n=++serial;$('renderStatus').textContent='Рассчитываем…';try{const d=await api('api/preview',payload());if(v!==version||n!==serial)return;const im=new Image();await new Promise((yes,no)=>{im.onload=yes;im.onerror=no;im.src=d.image});if(v!==version||n!==serial)return;result=d;picture=im;canvas.width=d.width;canvas.height=d.height;draw();$('renderStatus').textContent='Предпросмотр актуален'}catch(e){if(v===version&&n===serial){result=null;$('renderStatus').textContent=e.message||'Не удалось показать фото'}}}
 let drag=null;function pos(e){const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*canvas.width/r.width,y:(e.clientY-r.top)*canvas.height/r.height}}
 canvas.onpointerdown=e=>{if(!result)return;const q=pos(e);let best=null,dist=30*canvas.width/canvas.clientWidth;for(const h of result.handles){const d=Math.hypot(q.x-h.x,q.y-h.y);if(d<dist){best=h;dist=d}}if(!best)return;drag={q,handles:result.handles.map(h=>({...h})),unit:result.unit,sign:best.sign,x:Number($('offset_x').value),y:Number($('offset_y').value)};canvas.setPointerCapture(e.pointerId);e.preventDefault()};
-canvas.onpointermove=e=>{if(!drag)return;const q=pos(e);$('offset_x').value=Math.max(-3,Math.min(3,drag.x+(q.x-drag.q.x)/drag.unit/drag.sign)).toFixed(5);$('offset_y').value=Math.max(-3,Math.min(3,drag.y+(q.y-drag.q.y)/drag.unit)).toFixed(5);draw(drag.handles.map(h=>({...h,x:h.x+(Number($('offset_x').value)-drag.x)*drag.unit*h.sign,y:h.y+(Number($('offset_y').value)-drag.y)*drag.unit}))};
+canvas.onpointermove = e => {
+  if (!drag) return;
+  const q = pos(e);
+  $('offset_x').value = Math.max(-3, Math.min(3, drag.x + (q.x - drag.q.x) / drag.unit / drag.sign)).toFixed(5);
+  $('offset_y').value = Math.max(-3, Math.min(3, drag.y + (q.y - drag.q.y) / drag.unit)).toFixed(5);
+  draw(drag.handles.map(h => ({
+    ...h,
+    x: h.x + (Number($('offset_x').value) - drag.x) * drag.unit * h.sign,
+    y: h.y + (Number($('offset_y').value) - drag.y) * drag.unit,
+  })));
+};
 function end(){if(drag){drag=null;changed();clearTimeout(timer);preview()}}canvas.onpointerup=end;canvas.onpointercancel=end;
 for(const kind of ['jewelry','photo'])$(kind).onchange=async()=>{const f=$(kind).files[0];if(!f)return;try{if(f.size>12*1024*1024)throw Error('Максимум 12 МБ');$('status').textContent='Загрузка…';const d=await api(`api/upload/${kind}?crop=${kind==='jewelry'&&$('crop').checked}`,f,true);if(kind==='jewelry')asset=d.token;else photo=d.token;changed();$('status').textContent='Изображение загружено'}catch(e){$('status').textContent=e.message}};
 $('name').oninput=()=>{check();changed()};$('category').onchange=()=>{visibility();changed()};for(const k of [...Object.keys(spec),'earMode'])$(k).onchange=changed;

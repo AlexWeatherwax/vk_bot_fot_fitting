@@ -7,16 +7,14 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv()
-
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / ".env")
 
 
 @dataclass
 class Config:
     vk_token: str
     group_id: int
-    tmp_dir: Path
     log_level: str
 
 
@@ -35,14 +33,9 @@ def load_config() -> Config:
             "Укажите числовой ID сообщества в .env."
         )
 
-    tmp_dir_raw = os.getenv("TMP_DIR")
-    tmp_dir = Path(tmp_dir_raw) if tmp_dir_raw else (BASE_DIR / "data" / "tmp")
-    tmp_dir.mkdir(parents=True, exist_ok=True)
-
     return Config(
         vk_token=token,
         group_id=int(group_id_raw),
-        tmp_dir=tmp_dir,
         log_level=os.getenv("LOG_LEVEL", "INFO"),
     )
 

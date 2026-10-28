@@ -3,7 +3,8 @@
 
 Список позиций держится здесь, в RESHOOT: он же продублирован словами в
 bot/jewelry/gallery/imladris/NEEDS_REVIEW.md. Миниатюры берутся из архива
-(work/items.json) и складываются в work/brief_img/.
+(work/items.json) и складываются в work/brief_img/. Итоговый PDF сохраняется
+в work/brief/, постоянные иллюстрации сравнения ракурсов — в examples/.
 
 Запускать окружением .venv-import (нужны Pillow и reportlab):
 
@@ -24,11 +25,10 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (BaseDocTemplate, Frame, Image as RLImage, KeepTogether,
                                 PageBreak, PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
-from paths import HERE, ITEMS_JSON, WORK_DIR
+from paths import EXAMPLES_DIR, ITEMS_JSON, WORK_DIR
 
 IMG_DIR = WORK_DIR / "brief_img"
-TRYON_DIR = WORK_DIR / "tryon_sheets"
-OUT = HERE / "Задание на пересъёмку.pdf"
+OUT = WORK_DIR / "brief" / "Задание на пересъёмку.pdf"
 
 FONTS = "/System/Library/Fonts/Supplemental/"
 pdfmetrics.registerFont(TTFont("A", FONTS + "Arial.ttf"))
@@ -67,9 +67,9 @@ FOOT = st("FOOT", 8, 11, color=SOFT)
 # прислал все запрошенные кадры (см. bot/jewelry/gallery/imladris/NEEDS_REVIEW.md,
 # раздел «Решено пересъёмкой 6.09.2026»). Списки оставлены заполненными как
 # образец формата на случай новой пересъёмки; main() ниже отказывается
-# генерировать PDF, пока все три списка не окажутся пустыми (см. проверку
-# ALL_RESOLVED) — иначе легко один раз забыть вычистить их и разослать
-# фотографу задание на то, что уже переснято.
+# генерировать PDF, пока ALL_RESOLVED = True. Для нового задания нужно
+# обновить списки и тексты, затем снять флаг — иначе легко повторно
+# отправить фотографу задание на то, что уже переснято.
 ALL_RESOLVED = True
 
 # (ключ товара, индекс кадра для миниатюры, название, что сейчас, что снять)
@@ -195,6 +195,7 @@ def main() -> None:
         )
         return
     thumbs = prepare_thumbs()
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     doc = BaseDocTemplate(str(OUT), pagesize=A4,
                           leftMargin=20 * mm, rightMargin=20 * mm,
                           topMargin=18 * mm, bottomMargin=20 * mm,
@@ -245,8 +246,8 @@ def main() -> None:
         for key, _idx, name, problem, need in group:
             s.append(item_row(thumbs[key], name, problem, need))
 
-    hand = TRYON_DIR / "_brief_ring_hand.jpg"
-    dish = TRYON_DIR / "_brief_ring_dish.jpg"
+    hand = EXAMPLES_DIR / "_brief_ring_hand.jpg"
+    dish = EXAMPLES_DIR / "_brief_ring_dish.jpg"
     if hand.exists() and dish.exists():
         s.append(Paragraph("Почему ракурс важнее чистого фона", H2))
         s.append(Paragraph(
@@ -304,7 +305,7 @@ def main() -> None:
     s.append(Paragraph("Как передать файлы", H2))
     s.append(Paragraph(
         "Папка на товар, внутри — все кадры этого товара; папки разложены по разделам: "
-        "«Серьги», «Кулоны», «Кольца» и так далее. Ровно так, как сделана папка «Украшения» — "
+        "«Серьги», «Кулоны», «Кольца» и так далее. Ровно так, как сделана папка assets/source_photos — "
         "эта структура читается напрямую.", BODY))
     s.append(Paragraph(
         "Если zip собирается на Windows, а распаковывается на Mac, кириллица в именах папок "

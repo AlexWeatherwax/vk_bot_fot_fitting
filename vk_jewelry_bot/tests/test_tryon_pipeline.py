@@ -23,6 +23,7 @@ from PIL import Image
 pytest.importorskip("mediapipe")
 
 from bot.jewelry.catalog import catalog
+from bot.jewelry.models import Category
 from bot.tryon.pipeline import TryOnError, apply_tryon
 
 
@@ -36,7 +37,7 @@ def _noise_photo_bytes(w=450, h=600) -> bytes:
 
 @pytest.mark.parametrize(
     "category",
-    ["earrings", "ring", "pendant", "beads", "diadem", "hairpin", "brooch", "bracelet"],
+    [category.value for category in Category],
 )
 def test_apply_tryon_handles_no_match_gracefully(category):
     item = next((i for i in catalog.items if i.category.value == category), None)
