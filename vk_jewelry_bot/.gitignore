@@ -8,3 +8,6 @@ data/tmp/*
 .DS_Store
 .pytest_cache/
 
+/scripts/catalog_import/work/calibrate/
+/scripts/catalog_import/work/tryon_sheets/
+/scripts/catalog_import/Задание на пересъёмку.pdf
