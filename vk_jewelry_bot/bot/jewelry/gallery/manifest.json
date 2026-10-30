@@ -1,156 +1,156 @@
 [
   {
     "id": "imladris_earrings_sergi-priboy",
-    "name": "Серьги прибой",
+    "name": "Серьги Прибой",
     "category": "earrings",
     "image": "imladris/earrings/sergi-priboy.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "pair_image": true
   },
   {
     "id": "imladris_earrings_sergi-letnee-more",
-    "name": "Серьги летнее море",
+    "name": "Серьги Летнее море",
     "category": "earrings",
     "image": "imladris/earrings/sergi-letnee-more.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-nezhnye",
-    "name": "Серьги нежные",
+    "name": "Серьги Нежные",
     "category": "earrings",
     "image": "imladris/earrings/sergi-nezhnye.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-morskie",
-    "name": "Серьги морские",
+    "name": "Серьги Морские",
     "category": "earrings",
     "image": "imladris/earrings/sergi-morskie.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-s-kapelkami",
     "name": "Серьги с капельками",
     "category": "earrings",
     "image": "imladris/earrings/sergi-s-kapelkami.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-pervaya-zelen",
-    "name": "Серьги первая зелень",
+    "name": "Серьги Первая зелень",
     "category": "earrings",
     "image": "imladris/earrings/sergi-pervaya-zelen.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-tsvetenie",
-    "name": "Серьги цветение",
+    "name": "Серьги Цветение",
     "category": "earrings",
     "image": "imladris/earrings/sergi-tsvetenie.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-s-nefritom",
     "name": "Серьги с нефритом",
     "category": "earrings",
     "image": "imladris/earrings/sergi-s-nefritom.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-s-agatom",
     "name": "Серьги с агатом",
     "category": "earrings",
     "image": "imladris/earrings/sergi-s-agatom.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-chernye-kapli",
-    "name": "Серьги чёрные капли",
+    "name": "Серьги Чёрные капли",
     "category": "earrings",
     "image": "imladris/earrings/sergi-chernye-kapli.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-trikvetr",
     "name": "Серьги Трикветр",
     "category": "earrings",
     "image": "imladris/earrings/sergi-trikvetr.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-slozhi-kamushki-drug-na-druga",
-    "name": "Серьги сложи камушки друг на друга",
+    "name": "Серьги Сложи камушки друг на друга",
     "category": "earrings",
     "image": "imladris/earrings/sergi-slozhi-kamushki-drug-na-druga.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-s-labradoritom-2",
     "name": "Серьги с лабрадоритом 2",
     "category": "earrings",
     "image": "imladris/earrings/sergi-s-labradoritom-2.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-letnee-solntse",
-    "name": "Серьги летнее солнце",
+    "name": "Серьги Летнее солнце",
     "category": "earrings",
     "image": "imladris/earrings/sergi-letnee-solntse.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "pair_image": false
   },
   {
@@ -158,76 +158,76 @@
     "name": "Серьги Лесное лето",
     "category": "earrings",
     "image": "imladris/earrings/sergi-lesnoe-leto.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-noch",
     "name": "Серьги Ночь",
     "category": "earrings",
     "image": "imladris/earrings/sergi-noch.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-yagodnye",
     "name": "Серьги Ягодные",
     "category": "earrings",
     "image": "imladris/earrings/sergi-yagodnye.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-laurelome",
     "name": "Серьги Лауреломэ",
     "category": "earrings",
     "image": "imladris/earrings/sergi-laurelome.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-cherno-zolotye",
     "name": "Серьги чёрно-золотые",
     "category": "earrings",
     "image": "imladris/earrings/sergi-cherno-zolotye.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
-    "pair_image": true
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
+    "pair_image": false
   },
   {
     "id": "imladris_earrings_sergi-rozovyy-led",
-    "name": "Серьги розовый лёд",
+    "name": "Серьги Розовый лёд",
     "category": "earrings",
     "image": "imladris/earrings/sergi-rozovyy-led.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "pair_image": true
   },
   {
     "id": "imladris_earrings_sergi-yasnoe-nebo",
-    "name": "Серьги ясное небо",
+    "name": "Серьги Ясное небо",
     "category": "earrings",
     "image": "imladris/earrings/sergi-yasnoe-nebo.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "pair_image": false
   },
   {
@@ -235,80 +235,80 @@
     "name": "Кольцо Особенное",
     "category": "ring",
     "image": "imladris/ring/koltso-osobennoe.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_ring_koltso-svet-luny",
     "name": "Кольцо Свет Луны",
     "category": "ring",
     "image": "imladris/ring/koltso-svet-luny.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_ring_koltso-peski-vremeni",
     "name": "Кольцо Пески времени",
     "category": "ring",
     "image": "imladris/ring/koltso-peski-vremeni.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_ring_koltso-lazurnye-vody",
     "name": "Кольцо Лазурные воды",
     "category": "ring",
     "image": "imladris/ring/koltso-lazurnye-vody.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_ring_koltso-parad-planet",
     "name": "Кольцо парад планет",
     "category": "ring",
     "image": "imladris/ring/koltso-parad-planet.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-lavanda",
     "name": "Кулон Лаванда",
     "category": "pendant",
     "image": "imladris/pendant/kulon-lavanda.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-groza",
     "name": "Кулон Гроза",
     "category": "pendant",
     "image": "imladris/pendant/kulon-groza.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-nebesnyy-kupol",
     "name": "Кулон Небесный купол",
     "category": "pendant",
     "image": "imladris/pendant/kulon-nebesnyy-kupol.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -316,10 +316,10 @@
     "name": "Кулон Хмель",
     "category": "pendant",
     "image": "imladris/pendant/kulon-hmel.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -327,10 +327,10 @@
     "name": "Кулон лесная тропинка",
     "category": "pendant",
     "image": "imladris/pendant/kulon-lesnaya-tropinka.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -338,10 +338,10 @@
     "name": "Кулон золотое сердце",
     "category": "pendant",
     "image": "imladris/pendant/kulon-zolotoe-serdtse.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -349,40 +349,40 @@
     "name": "Колье лесной дождь",
     "category": "beads",
     "image": "imladris/beads/kole-lesnoy-dozhd.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-lavandovyy-led",
     "name": "Кулон Лавандовый лёд",
     "category": "pendant",
     "image": "imladris/pendant/kulon-lavandovyy-led.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-predanie",
     "name": "Кулон Предание",
     "category": "pendant",
     "image": "imladris/pendant/kulon-predanie.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-teplyy-yantar",
     "name": "Кулон тёплый янтарь",
     "category": "pendant",
     "image": "imladris/pendant/kulon-teplyy-yantar.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -390,10 +390,10 @@
     "name": "Кулон вишнёвое дерево",
     "category": "pendant",
     "image": "imladris/pendant/kulon-vishnevoe-derevo.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -401,10 +401,10 @@
     "name": "Кулон Внутренняя сила",
     "category": "pendant",
     "image": "imladris/pendant/kulon-vnutrennyaya-sila.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -412,10 +412,10 @@
     "name": "Кулон шёлковые травы",
     "category": "pendant",
     "image": "imladris/pendant/kulon-shelkovye-travy.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -423,30 +423,30 @@
     "name": "Кулон с клубничным кварцем Обещание",
     "category": "pendant",
     "image": "imladris/pendant/kulon-s-klubnichnym-kvartsem-obeshchanie.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-tigr",
     "name": "Кулон Тигр",
     "category": "pendant",
     "image": "imladris/pendant/kulon-tigr.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-nezhnost",
     "name": "Кулон нежность",
     "category": "pendant",
     "image": "imladris/pendant/kulon-nezhnost.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -454,10 +454,10 @@
     "name": "Кулон Зелёная яшма",
     "category": "pendant",
     "image": "imladris/pendant/kulon-zelenaya-yashma.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -465,20 +465,20 @@
     "name": "Кулон снежный барбарис",
     "category": "pendant",
     "image": "imladris/pendant/kulon-snezhnyy-barbaris.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-iskristyy",
     "name": "Кулон Искристый",
     "category": "pendant",
     "image": "imladris/pendant/kulon-iskristyy.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -486,40 +486,40 @@
     "name": "Кулон Мох",
     "category": "pendant",
     "image": "imladris/pendant/kulon-moh.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-tumannost",
     "name": "Кулон Туманность",
     "category": "pendant",
     "image": "imladris/pendant/kulon-tumannost.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-zimniy-les",
     "name": "Кулон Зимний Лес",
     "category": "pendant",
     "image": "imladris/pendant/kulon-zimniy-les.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-s-krasnoy-yashmoy-pustynnaya-zmeyka",
     "name": "Кулон с красной яшмой Пустынная змейка",
     "category": "pendant",
     "image": "imladris/pendant/kulon-s-krasnoy-yashmoy-pustynnaya-zmeyka.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -527,10 +527,10 @@
     "name": "Кулон это был зуб",
     "category": "pendant",
     "image": "imladris/pendant/kulon-eto-byl-zub.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -538,60 +538,60 @@
     "name": "Венец (Диадема) Ранняя Осень",
     "category": "diadem",
     "image": "imladris/diadem/venets-diadema-rannyaya-osen.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_diadem_venets-techenie",
     "name": "Венец Течение",
     "category": "diadem",
     "image": "imladris/diadem/venets-techenie.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_diadem_venets-diadema-zimnie-yagody-i-sergi",
     "name": "Венец (диадема) Зимние ягоды и серьги",
     "category": "diadem",
     "image": "imladris/diadem/venets-diadema-zimnie-yagody-i-sergi.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_brooch_belaya-strekoza",
     "name": "Брошь Белая стрекоза",
     "category": "brooch",
     "image": "imladris/brooch/belaya-strekoza.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_brooch_serebryanyy-list",
     "name": "Брошь Серебряный лист",
     "category": "brooch",
     "image": "imladris/brooch/serebryanyy-list.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_hairpin_zakolka-avtomat-solnechnyy-zaychik",
     "name": "Заколка-автомат Солнечный зайчик",
     "category": "hairpin",
     "image": "imladris/hairpin/zakolka-avtomat-solnechnyy-zaychik.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "hairpin_style": "side",
     "hairpin_side": "left"
   },
@@ -600,80 +600,80 @@
     "name": "Заколка Гроза",
     "category": "hairpin",
     "image": "imladris/hairpin/groza.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_hairpin_leto",
     "name": "Заколка Лето",
     "category": "hairpin",
     "image": "imladris/hairpin/leto.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_hairpin_shpilka-s-imitatsiey-biryuzy",
     "name": "Шпилька с имитацией бирюзы",
     "category": "hairpin",
     "image": "imladris/hairpin/shpilka-s-imitatsiey-biryuzy.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_hairpin_shpilka-fibula-vesna",
     "name": "Шпилька-фибула Весна",
     "category": "hairpin",
     "image": "imladris/hairpin/shpilka-fibula-vesna.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_hairpin_solnechnye-bliki",
     "name": "Заколка Солнечные блики",
     "category": "hairpin",
     "image": "imladris/hairpin/solnechnye-bliki.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_hairpin_shpilka-s-yashmoy",
     "name": "Шпилька с яшмой",
     "category": "hairpin",
     "image": "imladris/hairpin/shpilka-s-yashmoy.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_hairpin_yagody",
     "name": "Заколка Ягоды",
     "category": "hairpin",
     "image": "imladris/hairpin/yagody.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-plamya",
     "name": "Кулон Пламя",
     "category": "pendant",
     "image": "imladris/pendant/kulon-plamya.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -681,20 +681,20 @@
     "name": "Кулон Медитация",
     "category": "pendant",
     "image": "imladris/pendant/kulon-meditatsiya.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_pendant_kulon-plamya-oseni",
     "name": "Кулон Пламя осени",
     "category": "pendant",
     "image": "imladris/pendant/kulon-plamya-oseni.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -702,10 +702,10 @@
     "name": "Кулон Ранняя осень",
     "category": "pendant",
     "image": "imladris/pendant/kulon-rannyaya-osen.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -713,10 +713,10 @@
     "name": "Кулон Амрот",
     "category": "pendant",
     "image": "imladris/pendant/amrot.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -724,10 +724,10 @@
     "name": "Кулон Финдуилас",
     "category": "pendant",
     "image": "imladris/pendant/finduilas.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "chain_color": "gold"
   },
   {
@@ -735,80 +735,80 @@
     "name": "Браслет с бусинами нефрита",
     "category": "bracelet",
     "image": "imladris/bracelet/braslet-s-businami-nefrita.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_bracelet_trilistniki",
     "name": "Браслет Трилистники",
     "category": "bracelet",
     "image": "imladris/bracelet/trilistniki.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_bracelet_asimmetrichnyy-so-steklyannymi-businami",
     "name": "Браслет Асимметричный со стеклянными бусинами",
     "category": "bracelet",
     "image": "imladris/bracelet/asimmetrichnyy-so-steklyannymi-businami.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_bracelet_kvarts",
     "name": "Браслет Кварц",
     "category": "bracelet",
     "image": "imladris/bracelet/kvarts.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_kaffy_lesnoe-leto",
     "name": "Кафф Лесное лето",
     "category": "kaffy",
     "image": "imladris/kaffy/lesnoe-leto.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_kaffy_letnie-yagody",
     "name": "Кафф Летние ягоды",
     "category": "kaffy",
     "image": "imladris/kaffy/letnie-yagody.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_kaffy_zimniy-les",
     "name": "Кафф Зимний лес",
     "category": "kaffy",
     "image": "imladris/kaffy/zimniy-les.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_kaffy_snezhnoyagodnik",
     "name": "Кафф Снежноягодник",
     "category": "kaffy",
     "image": "imladris/kaffy/snezhnoyagodnik.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "kaffy_anchor_y": 0.28
   },
   {
@@ -816,10 +816,10 @@
     "name": "Кафф Снежноягодник без подвесов",
     "category": "kaffy",
     "image": "imladris/kaffy/snezhnoyagodnik-bez-podvesov.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "kaffy_anchor_y": 0.36
   },
   {
@@ -827,20 +827,20 @@
     "name": "Кафф Ягоды и листья",
     "category": "kaffy",
     "image": "imladris/kaffy/yagody-i-listya.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_kaffy_yagody-i-shishki",
     "name": "Кафф Ягоды и шишки",
     "category": "kaffy",
     "image": "imladris/kaffy/yagody-i-shishki.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "kaffy_anchor_y": 0.24
   },
   {
@@ -848,20 +848,20 @@
     "name": "Кафф Россыпь ягод",
     "category": "kaffy",
     "image": "imladris/kaffy/rossyp-yagod.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0
   },
   {
     "id": "imladris_kaffy_morskoy",
     "name": "Кафф Морской",
     "category": "kaffy",
     "image": "imladris/kaffy/morskoy.png",
-    "anchor_scale": 1.0,
-    "offset_x": 0.0,
-    "offset_y": 0.0,
-    "rotation_offset": 0.0,
+    "anchor_scale": 1,
+    "offset_x": 0,
+    "offset_y": 0,
+    "rotation_offset": 0,
     "kaffy_anchor_y": 0.4
   }
 ]
