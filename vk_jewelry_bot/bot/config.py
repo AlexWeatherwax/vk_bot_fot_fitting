@@ -7,9 +7,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv()
-
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / ".env")
 
 
 @dataclass
@@ -37,6 +36,8 @@ def load_config() -> Config:
 
     tmp_dir_raw = os.getenv("TMP_DIR")
     tmp_dir = Path(tmp_dir_raw) if tmp_dir_raw else (BASE_DIR / "data" / "tmp")
+    if not tmp_dir.is_absolute():
+        tmp_dir = BASE_DIR / tmp_dir
     tmp_dir.mkdir(parents=True, exist_ok=True)
 
     return Config(

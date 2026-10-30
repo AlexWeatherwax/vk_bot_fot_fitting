@@ -11,6 +11,17 @@
 """
 import logging
 
+# Поддерживаем кнопку Run File в редакторе: запускаем каноническую точку входа.
+if __name__ == "__main__" and not __package__:
+    import runpy
+    import sys
+    from pathlib import Path
+
+    project_dir = Path(__file__).resolve().parent.parent
+    sys.path.insert(0, str(project_dir))
+    runpy.run_path(str(project_dir / "run.py"), run_name="__main__")
+    raise SystemExit(0)
+
 from vkbottle.bot import Bot
 
 from .config import config
@@ -36,3 +47,7 @@ def run() -> None:
     # run() сам поднимает asyncio-цикл и слушает Group Long Poll ВК —
     # отдельного сервера/вебхука/домена для этого не требуется.
     bot.run()
+
+
+if __name__ == "__main__":
+    run()
