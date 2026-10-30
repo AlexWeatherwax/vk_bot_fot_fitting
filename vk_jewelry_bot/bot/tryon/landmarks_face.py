@@ -5,9 +5,8 @@
 
 ВАЖНО: у Face Landmarker нет отдельного landmark-а именно для мочки уха
 (модель описывает овал лица, а не уши целиком) — точки 234/454 это край щеки
-на уровне уха, а не сама мочка. Поэтому позиция серёг — приближение; кафф
-садится на ту же точку мочки, что и серьга (самая украшенная часть каффа —
-на мочку, дужка уходит вверх на раковину сама). Если на конкретной картинке
+на уровне уха, а не сама мочка. Поэтому позиция серёг — приближение. Для серёг pipeline передаёт
+отдельное смещение вниз; каффы сохраняют прежнюю калибровку. Если на конкретной картинке
 украшение ложится чуть не там, подстройте offset_x/offset_y/anchor_scale
 для этого украшения в manifest.json (см. bot/jewelry/gallery/README.md).
 """
@@ -36,15 +35,8 @@ _EYE_R_OUTER = 263
 _LOBE_DOWN = 0.19
 _LOBE_OUT = 0.03
 
-# Кафф отдельной точки не получил: по заказчику, самая украшенная часть
-# каффа (гроздь бусин) должна сесть примерно на мочку — ту же точку, что и
-# серьга. Дужка каффа сама уйдёт вверх на раковину, раз крепится выше
-# гроздь-центра картинки (см. overlay_anchor в pipeline._apply_kaffy).
-# Так надёжнее, чем отдельная точка: _LOBE_DOWN/_LOBE_OUT уже откалиброваны
-# по калибровочным фото, а отдельная попытка сделать то же для каффа
-# (через маску-образец заказчика, переведённую в доли face_width) на живом
-# фото сажала кафф то на щёку, то выше уха, чем нужно — своя точка для
-# каффа не подтвердилась и была убрана.
+# Значение по умолчанию сохраняет прежнюю калибровку каффов.
+# Для серёг используется EARRING_LOBE_DOWN из pipeline.py.
 
 # Висок (для заколки, которую носят не вертикально в пучке, а горизонтально,
 # сбоку, над ухом): вдоль оси «подбородок -> лоб» от точки уха, доля ширины
@@ -81,7 +73,12 @@ _options = vision.FaceLandmarkerOptions(
 _landmarker = vision.FaceLandmarker.create_from_options(_options)
 
 
-def get_face_anchors(image_bgr) -> Optional[FaceAnchors]:
+def get_face_anchors(image_bgr, *, lobe_down: float = _LOBE_DOWN) -> Optional[FaceAnchors]:
+    """lobe_down — смещение от щеки вниз в долях ширины лица.
+
+    По умолчанию сохраняется прежняя калибровка каффов; серьги передают
+    своё смещение, поскольку 0.19 опускает их крепление ниже мочки.
+    """
     h, w = image_bgr.shape[:2]
     rgb = image_bgr[:, :, ::-1]  # mediapipe ждёт RGB
     mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb.copy())
@@ -121,8 +118,8 @@ def get_face_anchors(image_bgr) -> Optional[FaceAnchors]:
 
     def lobe(ear, side):
         return (
-            ear[0] + down[0] * _LOBE_DOWN * face_width + side * _LOBE_OUT * face_width,
-            ear[1] + down[1] * _LOBE_DOWN * face_width,
+            ear[0] + down[0] * lobe_down * face_width + side * _LOBE_OUT * face_width,
+            ear[1] + down[1] * lobe_down * face_width,
         )
 
     def temple(ear, side):
