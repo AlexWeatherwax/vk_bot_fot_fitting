@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "description": "Developer visual estimates of intended lobe contact, not observed piercing holes. Synthetic fixtures only; no training/test generalization claim.",
+  "side_convention": "image left/right",
+  "samples": [
+    {
+      "image": "1000013929.jpg",
+      "sha256": "942d20fab6bce019266cb4a4ebccc3f58b4c89f0eae0cdc1361753bd710f8b30",
+      "subject_id": "synthetic-model-1",
+      "points": {
+        "left": {
+          "xy": [
+            355,
+            513
+          ],
+          "visible": true,
+          "uncertainty_px": 10
+        },
+        "right": {
+          "xy": [
+            750,
+            513
+          ],
+          "visible": true,
+          "uncertainty_px": 10
+        }
+      }
+    },
+    {
+      "image": "1000013935_profil_ukho_kaffy.jpg",
+      "sha256": "2afe9501f32bac712699ac67d9fec2d83cb91d6d7b10fa726883296eed194341",
+      "subject_id": "synthetic-model-1",
+      "points": {
+        "left": {
+          "xy": null,
+          "visible": false
+        },
+        "right": {
+          "xy": [
+            660,
+            507
+          ],
+          "visible": true,
+          "uncertainty_px": 10
+        }
+      }
+    }
+  ]
+}

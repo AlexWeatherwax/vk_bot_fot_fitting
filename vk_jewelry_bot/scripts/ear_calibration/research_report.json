@@ -1,0 +1,89 @@
+{
+  "scope": "Two synthetic views of one subject; developer-estimated contacts, not piercing labels",
+  "unique_images": 2,
+  "visible_ears": 3,
+  "baseline_mean_error_px": 31.158513154279827,
+  "parser_detected_visible_ears": 3,
+  "parser_mean_error_px": 5.026396705889031,
+  "parser_hidden_ear_false_positives": 0,
+  "rows": [
+    {
+      "image": "1000013929.jpg",
+      "side": "left",
+      "visible": true,
+      "baseline_xy": [
+        350.0478755188484,
+        483.7491040480329
+      ],
+      "parser_xy": [
+        353.8330078125,
+        511.9541015625
+      ],
+      "score": 0.9667741060256958,
+      "parser_seconds": 2.165,
+      "reference_xy": [
+        355,
+        513
+      ],
+      "uncertainty_px": 10,
+      "baseline_error_px": 29.66712744553517,
+      "parser_error_px": 1.5670910334919848
+    },
+    {
+      "image": "1000013929.jpg",
+      "side": "right",
+      "visible": true,
+      "baseline_xy": [
+        756.7426222995697,
+        483.9659152877523
+      ],
+      "parser_xy": [
+        752.548828125,
+        513.1904296875
+      ],
+      "score": 0.9698906540870667,
+      "parser_seconds": 2.165,
+      "reference_xy": [
+        750,
+        513
+      ],
+      "uncertainty_px": 10,
+      "baseline_error_px": 29.80672794106442,
+      "parser_error_px": 2.555931978099645
+    },
+    {
+      "image": "1000013935_profil_ukho_kaffy.jpg",
+      "side": "left",
+      "visible": false,
+      "baseline_xy": [
+        310.8936075118477,
+        463.53034382642727
+      ],
+      "parser_xy": null,
+      "score": null,
+      "parser_seconds": 2.061
+    },
+    {
+      "image": "1000013935_profil_ukho_kaffy.jpg",
+      "side": "right",
+      "visible": true,
+      "baseline_xy": [
+        649.9496983948435,
+        474.5176054197691
+      ],
+      "parser_xy": [
+        670.265625,
+        503.171875
+      ],
+      "score": 0.9775812029838562,
+      "parser_seconds": 2.061,
+      "reference_xy": [
+        660,
+        507
+      ],
+      "uncertainty_px": 10,
+      "baseline_error_px": 34.00168407623989,
+      "parser_error_px": 10.956167106075464
+    }
+  ]
+}

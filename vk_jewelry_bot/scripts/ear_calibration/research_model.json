@@ -1,0 +1,10 @@
+{
+  "model": "jonathandinu/face-parsing",
+  "revision": "758b82e15a0178c9db39c1ff666a8b56e3a550c8",
+  "file": "onnx/model_quantized.onnx",
+  "sha256": "5bab9bfb3cb979f3098ac3b934b1641dbf87f835e0b03c2ca6d88dcf18c83d27",
+  "model_card": "https://huggingface.co/jonathandinu/face-parsing",
+  "license_note": "Model card: non-commercial research and educational purposes. Not approved for commercial deployment. Weights are not included in this repository.",
+  "preprocessing": "RGB, bilinear 512x512, /255, mean [.485,.456,.406], std [.229,.224,.225]",
+  "runtime": "onnxruntime 1.31.1, CPUExecutionProvider"
+}

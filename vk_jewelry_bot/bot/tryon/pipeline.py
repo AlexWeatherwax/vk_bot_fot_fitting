@@ -15,6 +15,7 @@ from . import landmarks_face as face_mod
 from . import landmarks_hand as hand_mod
 from . import landmarks_pose as pose_mod
 from .compose import overlay_image
+from .ear_segmentation import earring_points
 
 
 class TryOnError(Exception):
@@ -217,21 +218,29 @@ def _apply_earrings(base, overlay_img, np_bgr, item: JewelryItem):
             "с открытыми ушами и хорошим освещением."
         )
 
+    # With an explicit parser model, only detected visible ears are rendered.
+    points = earring_points(np_bgr, anchors)
+    if not points:
+        raise TryOnError("Не удалось уверенно найти открытое ухо. Пришлите фото с убранными от ушей волосами.")
+
     target_length = anchors.face_width * EARRING_LENGTH_FRACTION * item.anchor_scale
     pair = split_pair(overlay_img, item.image) if item.pair_image else None
 
     if pair is not None:
         # На картинке обе серьги пары — каждую сажаем на своё ухо как есть,
         # без зеркалирования (пара бывает несимметричной).
-        sides = ((-1, anchors.left_lobe, pair[0]), (1, anchors.right_lobe, pair[1]))
+        sides = tuple((sign, points[side], part) for side, sign, part in
+                      (("left", -1, pair[0]), ("right", 1, pair[1])) if side in points)
     elif item.pair_image:
         # Пара не разбирается даже по долине — серьги на картинке
         # перекрываются. Вставляем картинку целиком между ушами, но по
         # размеру одной серьги на две: иначе пара растягивается на всю
         # ширину лица и ложится поперёк носа.
+        if len(points) < 2:
+            raise TryOnError("Для этого изображения пары нужны оба открытых уха.")
         mid = (
-            (anchors.left_lobe[0] + anchors.right_lobe[0]) / 2,
-            (anchors.left_lobe[1] + anchors.right_lobe[1]) / 2,
+            (points["left"][0] + points["right"][0]) / 2,
+            (points["left"][1] + points["right"][1]) / 2,
         )
         return overlay_image(
             base,
@@ -244,13 +253,12 @@ def _apply_earrings(base, overlay_img, np_bgr, item: JewelryItem):
         )
     elif item.single_ear:
         # Несимметричная моно-серьга — только одно ухо, без зеркалирования.
-        sides = ((-1, anchors.left_lobe, overlay_img),)
+        side = "left" if "left" in points else "right"
+        sides = ((-1 if side == "left" else 1, points[side], overlay_img),)
     else:
         mirrored = overlay_img.transpose(Image.FLIP_LEFT_RIGHT)
-        sides = (
-            (-1, anchors.left_lobe, overlay_img),
-            (1, anchors.right_lobe, mirrored),
-        )
+        sides = tuple((sign, points[side], part) for side, sign, part in
+                      (("left", -1, overlay_img), ("right", 1, mirrored)) if side in points)
 
     for side, point, ov in sides:
         ox = point[0] + anchors.face_width * item.offset_x * side

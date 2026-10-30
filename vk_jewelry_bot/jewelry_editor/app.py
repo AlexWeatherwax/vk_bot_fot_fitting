@@ -167,8 +167,8 @@ def render(p):
     with RENDER_LOCK,ExitStack() as stack:
         for module,func in [(pipeline.face_mod,'get_face_anchors'),(pipeline.hand_mod,'get_ring_anchor'),(pipeline.hand_mod,'get_wrist_anchor'),(pipeline.pose_mod,'get_neck_anchor')]:
             original=getattr(module,func)
-            def cached(img,original=original,key=func):
-                if key not in detected: detected[key]=original(img)
+            def cached(img,*args,original=original,key=func,**kwargs):
+                if key not in detected: detected[key]=original(img,*args,**kwargs)
                 return detected[key]
             stack.enter_context(patch.object(module,func,cached))
         original=pipeline.overlay_image

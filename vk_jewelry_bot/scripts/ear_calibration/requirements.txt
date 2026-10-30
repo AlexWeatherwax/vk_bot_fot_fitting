@@ -1,0 +1,2 @@
+# Optional local ONNX inference; main bot requirements are still required.
+onnxruntime>=1.20,<2
