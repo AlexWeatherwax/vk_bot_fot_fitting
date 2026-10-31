@@ -77,3 +77,21 @@ def test_configured_parser_keeps_only_detected_ear(monkeypatch):
     parser=SimpleNamespace(predict=lambda image,a:{'right':m.EarPoint((30,20),.9,100)})
     monkeypatch.setattr(m,'_parser_for',lambda path: parser)
     assert m.earring_points(None,None)=={'right':(30,20)}
+
+
+def test_ort_telemetry_disabled_before_session(monkeypatch):
+    import os
+    import sys
+    from bot.tryon.ear_segmentation import EarParser
+    calls=[]
+    def disable():
+        assert os.environ['ORT_DISABLE_TELEMETRY']=='1'
+        calls.append('disable')
+    def session(*args,**kwargs):
+        assert calls==['disable']
+        return object()
+    monkeypatch.delenv('ORT_DISABLE_TELEMETRY',raising=False)
+    monkeypatch.setitem(sys.modules,'onnxruntime',SimpleNamespace(
+        SessionOptions=lambda:SimpleNamespace(),disable_telemetry_events=disable,
+        InferenceSession=session))
+    EarParser('unused.onnx')

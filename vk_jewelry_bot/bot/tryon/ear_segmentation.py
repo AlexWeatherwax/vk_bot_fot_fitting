@@ -65,7 +65,10 @@ def points_from_logits(logits, box, image_size, anchors):
 
 class EarParser:
     def __init__(self, model_path: Path):
+        # Disable 1DS before importing ORT; API opt-out alone may be too late.
+        os.environ["ORT_DISABLE_TELEMETRY"] = "1"
         import onnxruntime as ort
+        ort.disable_telemetry_events()
         options = ort.SessionOptions()
         options.intra_op_num_threads = 2
         options.inter_op_num_threads = 1

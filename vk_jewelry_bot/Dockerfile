@@ -1,5 +1,8 @@
 FROM python:3.11-slim
 
+# Local inference must not initialize ONNX Runtime telemetry.
+ENV ORT_DISABLE_TELEMETRY=1
+
 # Системные библиотеки, нужные opencv/mediapipe для работы с изображениями
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1 \
