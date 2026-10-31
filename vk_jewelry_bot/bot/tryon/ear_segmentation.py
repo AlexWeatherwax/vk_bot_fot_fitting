@@ -1,6 +1,7 @@
 """Optional ear-mask refinement. No model downloads or model loading at import.
 
-The ONNX model must use the face-parsing label convention (ears = 8/9).
+The legacy ONNX model uses face-parsing labels 8/9; grounded-sam2 uses
+a text detector and a separate segmentation model.
 A mask locates visible ear tissue, NOT the actual piercing hole. Lobe contact
 is estimated from its lower portion. Occluded ears may have no usable mask.
 """
@@ -18,7 +19,7 @@ from PIL import Image
 @dataclass(frozen=True)
 class EarPoint:
     point: tuple[float, float]
-    score: float  # mean class probability, NOT a calibrated probability of correct placement
+    score: float  # backend quality score, NOT probability of correct placement
     area: int
 
 
@@ -101,11 +102,23 @@ def _parser_for(path):
     return EarParser(Path(path))
 
 
+@lru_cache(maxsize=1)
+def _grounded_parser_for(path):
+    from .grounded_ears import GroundedEarParser
+    return GroundedEarParser(Path(path))
+
+
 def earring_points(image_bgr, anchors):
+    backend = os.getenv('EAR_PARSER_BACKEND', 'legacy').strip()
+    if backend not in {'legacy', 'grounded-sam2'}:
+        raise ValueError('Unknown EAR_PARSER_BACKEND')
     configured = os.getenv('EAR_PARSER_MODEL', '').strip()
+    if backend == 'grounded-sam2' and not configured:
+        raise ValueError('EAR_PARSER_MODEL must point to downloaded grounded models')
     if not configured:
         return {'left': anchors.left_lobe, 'right': anchors.right_lobe}
     path = Path(configured).expanduser()
     if not path.is_absolute():
         path = Path(__file__).resolve().parents[2] / path
-    return {side: ear.point for side, ear in _parser_for(str(path)).predict(image_bgr, anchors).items()}
+    parser = _grounded_parser_for(str(path)) if backend == "grounded-sam2" else _parser_for(str(path))
+    return {side: ear.point for side, ear in parser.predict(image_bgr, anchors).items()}

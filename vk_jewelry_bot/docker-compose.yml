@@ -1,9 +1,11 @@
 services:
   bot:
     build: .
+    image: vk-jewelry-bot:local
     env_file: .env
     restart: unless-stopped
     volumes:
       # чтобы можно было добавлять/менять украшения без пересборки образа
       - ./bot/jewelry/gallery:/app/bot/jewelry/gallery
       - ./data/tmp:/app/data/tmp
+      - ./data/models:/app/data/models:ro

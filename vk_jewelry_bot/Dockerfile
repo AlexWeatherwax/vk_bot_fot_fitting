@@ -5,6 +5,8 @@ ENV ORT_DISABLE_TELEMETRY=1
 
 # Системные библиотеки, нужные opencv/mediapipe для работы с изображениями
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgles2 \
+    libseccomp2 \
     libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*

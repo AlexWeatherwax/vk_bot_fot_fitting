@@ -2,6 +2,7 @@
 Обработчик состояния "ждём фото": принимает присланное фото, запускает
 примерку выбранного украшения и отправляет результат обратно пользователю.
 """
+import asyncio
 import logging
 
 from vkbottle.bot import BotLabeler
@@ -9,7 +10,7 @@ from vkbottle.bot import Message
 
 from ..jewelry.catalog import catalog
 from ..states import TryOnStates
-from ..tryon.pipeline import TryOnError, apply_tryon
+from ..tryon.service import TryOnError, apply_tryon
 from ..vk_media import download_first_photo, upload_photo_for_message
 
 photo_labeler = BotLabeler()
@@ -44,7 +45,7 @@ async def photo_handler(message: Message):
         return
 
     try:
-        result_bytes = apply_tryon(item, catalog.image_path(item), photo_bytes)
+        result_bytes = await asyncio.to_thread(apply_tryon, item, catalog.image_path(item), photo_bytes)
     except TryOnError as exc:
         logger.info("Не удалось примерить %s: %s", item.id, exc)
         await message.answer(str(exc))

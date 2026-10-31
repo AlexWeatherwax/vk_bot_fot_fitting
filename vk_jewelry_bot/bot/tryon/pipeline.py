@@ -18,9 +18,7 @@ from .compose import overlay_image
 from .ear_segmentation import earring_points
 
 
-class TryOnError(Exception):
-    """Ожидаемая ошибка примерки (например, не найдено лицо/рука) — текст
-    этого исключения можно безопасно показать пользователю."""
+from .errors import TryOnError
 
 
 ALPHA_CLEAN_THRESHOLD = 160  # ниже этого считаем "фон", а не мягкий край объекта
