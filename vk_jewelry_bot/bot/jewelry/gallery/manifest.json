@@ -238,7 +238,7 @@
     "anchor_scale": 1,
     "offset_x": 0,
     "offset_y": 0,
-    "rotation_offset": 0
+    "rotation_offset": 180
   },
   {
     "id": "imladris_ring_koltso-svet-luny",
@@ -248,7 +248,7 @@
     "anchor_scale": 1,
     "offset_x": 0,
     "offset_y": 0,
-    "rotation_offset": 0
+    "rotation_offset": 180
   },
   {
     "id": "imladris_ring_koltso-peski-vremeni",
@@ -258,7 +258,7 @@
     "anchor_scale": 1,
     "offset_x": 0,
     "offset_y": 0,
-    "rotation_offset": 0
+    "rotation_offset": 180
   },
   {
     "id": "imladris_ring_koltso-lazurnye-vody",
@@ -268,7 +268,7 @@
     "anchor_scale": 1,
     "offset_x": 0,
     "offset_y": 0,
-    "rotation_offset": 0
+    "rotation_offset": 180
   },
   {
     "id": "imladris_ring_koltso-parad-planet",
@@ -278,7 +278,7 @@
     "anchor_scale": 1,
     "offset_x": 0,
     "offset_y": 0,
-    "rotation_offset": 0
+    "rotation_offset": 180
   },
   {
     "id": "imladris_pendant_kulon-lavanda",
