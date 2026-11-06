@@ -11,6 +11,13 @@
 from __future__ import annotations
 
 import unicodedata
+from pathlib import Path
+
+
+def resolve_source_path(value: str) -> Path:
+    """Путь из каталога относительно корня репозитория, независимо от cwd."""
+    path = Path(value)
+    return path if path.is_absolute() else Path(__file__).resolve().parents[3] / path
 
 # Символы, которые реально встречаются в нормальных русских названиях товаров.
 _PLAUSIBLE = set(
@@ -35,7 +42,10 @@ def demojibake(name: str) -> str:
     if all(ch in _PLAUSIBLE for ch in name):
         return name
     try:
-        return unicodedata.normalize("NFC", name.encode("mac_cyrillic").decode("cp866"))
+        decoded = unicodedata.normalize("NFC", name.encode("mac_cyrillic").decode("cp866"))
+        # Типографское тире и другая нормальная пунктуация тоже могут
+        # кодироваться в MacCyrillic. Не превращаем их и кириллицу в мусор.
+        return decoded if all(ch in _PLAUSIBLE for ch in decoded) else name
     except (UnicodeEncodeError, UnicodeDecodeError):
         return name
 

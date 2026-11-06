@@ -12,6 +12,7 @@ bot/jewelry/gallery/imladris/NEEDS_REVIEW.md. Миниатюры берутся 
 from __future__ import annotations
 
 import json
+from common import resolve_source_path
 
 from PIL import Image
 from reportlab.lib import colors
@@ -143,7 +144,7 @@ def prepare_thumbs() -> dict[str, str]:
     for group in (ANGLE, PROP, CUFF):
         for key, idx, *_ in group:
             src = items[key]["photos"][idx]
-            img = Image.open(src).convert("RGB")
+            img = Image.open(resolve_source_path(src)).convert("RGB")
             img.thumbnail((300, 300), Image.LANCZOS)
             square = Image.new("RGB", (300, 300), (255, 255, 255))
             square.paste(img, ((300 - img.width) // 2, (300 - img.height) // 2))

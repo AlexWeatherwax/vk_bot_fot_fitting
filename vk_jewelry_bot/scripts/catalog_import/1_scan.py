@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 from common import CATEGORY_BY_FOLDER, category_for, demojibake, slugify
-from paths import ITEMS_JSON, SOURCE_DIR, WORK_DIR
+from paths import ITEMS_JSON, SOURCE_DIR, WORK_DIR, REPO_ROOT
 
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 
@@ -38,8 +38,8 @@ def main() -> None:
                 "title": title,
                 "category": category,
                 "slug": slugify(title),
-                "dir": str(sub),
-                "photos": [str(p) for p in photos],
+                "dir": sub.relative_to(REPO_ROOT).as_posix(),
+                "photos": [p.relative_to(REPO_ROOT).as_posix() for p in photos],
             })
 
     WORK_DIR.mkdir(parents=True, exist_ok=True)

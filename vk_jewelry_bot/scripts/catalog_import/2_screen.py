@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import json
+from common import resolve_source_path
 import sys
 
 from PIL import Image
@@ -33,7 +34,7 @@ def main() -> None:
     for item in items:
         entries = []
         for idx, path in enumerate(item["photos"]):
-            rgb = Image.open(path).convert("RGB")
+            rgb = Image.open(resolve_source_path(path)).convert("RGB")
             rgb.thumbnail((ANALYSIS_SIZE, ANALYSIS_SIZE), Image.LANCZOS)
             cut = remove(rgb, session=session)
             info = describe(cut, rgb)

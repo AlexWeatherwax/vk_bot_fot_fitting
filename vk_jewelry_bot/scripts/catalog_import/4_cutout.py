@@ -17,6 +17,7 @@
 from __future__ import annotations
 
 import json
+from common import resolve_source_path
 import sys
 
 import cv2
@@ -156,7 +157,7 @@ def drop_reflection(mask: np.ndarray, split: float) -> np.ndarray:
 
 
 def process(pick: dict, opts: dict) -> dict:
-    src = Image.open(pick["photo"])
+    src = Image.open(resolve_source_path(pick["photo"]))
     try:
         from PIL import ImageOps
         src = ImageOps.exif_transpose(src)

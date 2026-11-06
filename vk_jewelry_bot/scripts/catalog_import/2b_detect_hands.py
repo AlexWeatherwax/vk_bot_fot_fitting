@@ -15,6 +15,7 @@
 from __future__ import annotations
 
 import json
+from common import resolve_source_path
 import sys
 from pathlib import Path
 
@@ -56,7 +57,7 @@ def main() -> None:
     for item in items:
         rows = []
         for idx, path in enumerate(item["photos"]):
-            img = cv2.imread(path)
+            img = cv2.imread(str(resolve_source_path(path)))
             if img is None:
                 rows.append({"index": idx, "hands": 0, "hand_frac": 0.0, "faces": 0})
                 done += 1

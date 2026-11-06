@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import json
+from common import resolve_source_path
 import sys
 
 from PIL import Image, ImageDraw, ImageFont
@@ -64,7 +65,7 @@ def main() -> None:
                 d.text((6, y + 26 + k * 22), line, font=font, fill=(0, 0, 0))
             d.text((6, y + TH - 22), f"кадр #{pick['chosen']}", font=small, fill=(150, 60, 60))
 
-            src = Image.open(pick["photo"]).convert("RGB")
+            src = Image.open(resolve_source_path(pick["photo"])).convert("RGB")
             src.thumbnail((TH, TH), Image.LANCZOS)
             sheet.paste(src, (LABEL_W + (TH - src.width) // 2, y + (TH - src.height) // 2))
 
