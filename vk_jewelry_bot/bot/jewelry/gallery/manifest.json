@@ -540,7 +540,7 @@
     "image": "imladris/diadem/venets-diadema-rannyaya-osen.png",
     "anchor_scale": 1,
     "offset_x": 0,
-    "offset_y": 0,
+    "offset_y": 0.2,
     "rotation_offset": 0
   },
   {
@@ -550,7 +550,7 @@
     "image": "imladris/diadem/venets-techenie.png",
     "anchor_scale": 1,
     "offset_x": 0,
-    "offset_y": 0,
+    "offset_y": 0.2,
     "rotation_offset": 0
   },
   {
@@ -560,7 +560,7 @@
     "image": "imladris/diadem/venets-diadema-zimnie-yagody-i-sergi.png",
     "anchor_scale": 1,
     "offset_x": 0,
-    "offset_y": 0,
+    "offset_y": 0.2,
     "rotation_offset": 0
   },
   {
