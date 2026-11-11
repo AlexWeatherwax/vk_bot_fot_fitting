@@ -55,6 +55,9 @@ class TryOnQueue:
     def pending_count(self) -> int:
         return self._queue.qsize() + (1 if self._processing_peer is not None else 0)
 
+    def has_peer(self, peer_id: int) -> bool:
+        return peer_id in self._pending_peers
+
     async def enqueue(self, job: TryOnJob) -> int:
         """Add a job and return its 1-based position including the active job."""
         peer_id = job.peer_id
