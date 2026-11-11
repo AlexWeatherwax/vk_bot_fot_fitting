@@ -1,8 +1,7 @@
 """
-Обработчик состояния "ждём фото": принимает присланное фото, запускает
-примерку выбранного украшения и отправляет результат обратно пользователю.
+Обработчик состояния "ждём фото": принимает присланное фото и ставит
+примерку выбранного украшения в FIFO-очередь.
 """
-import asyncio
 import logging
 
 from vkbottle.bot import BotLabeler
@@ -10,8 +9,13 @@ from vkbottle.bot import Message
 
 from ..jewelry.catalog import catalog
 from ..states import TryOnStates
-from ..tryon.service import TryOnError, apply_tryon
-from ..vk_media import download_first_photo, upload_photo_for_message
+from ..tryon.queue import (
+    DuplicateTryOnJob,
+    TryOnJob,
+    TryOnQueueFull,
+    tryon_queue,
+)
+from ..vk_media import download_first_photo
 
 photo_labeler = BotLabeler()
 logger = logging.getLogger("vk_jewelry_bot.photo")
@@ -35,8 +39,19 @@ async def photo_handler(message: Message):
 
     text = (message.text or "").strip().lower()
     if text in CANCEL_WORDS:
+        if tryon_queue.has_peer(message.peer_id):
+            await message.answer(
+                "Фото уже принято в обработку, поэтому остановить текущую примерку сейчас нельзя."
+            )
+            return
         await bot.state_dispenser.delete(message.peer_id)
         await message.answer("Хорошо, отменила. Напишите название другого украшения.")
+        return
+
+    if tryon_queue.has_peer(message.peer_id):
+        await message.answer(
+            "Ваше фото уже в очереди на примерку. Дождитесь результата перед отправкой нового."
+        )
         return
 
     photo_bytes = await download_first_photo(message)
@@ -44,30 +59,31 @@ async def photo_handler(message: Message):
         await message.answer("Жду именно фото 🙂 Прикрепите снимок к сообщению (или напишите «отмена»).")
         return
 
+    job = TryOnJob(
+        message=message,
+        bot=bot,
+        item=item,
+        overlay_path=catalog.image_path(item),
+        photo_bytes=photo_bytes,
+    )
     try:
-        result_bytes = await asyncio.to_thread(apply_tryon, item, catalog.image_path(item), photo_bytes)
-    except TryOnError as exc:
-        logger.info("Не удалось примерить %s: %s", item.id, exc)
-        await message.answer(str(exc))
-        return
-    except Exception:
-        logger.exception("Неожиданная ошибка примерки для %s", item.id)
-        await message.answer("Не получилось обработать это фото. Попробуйте другое.")
-        return
-
-    try:
-        attachment = await upload_photo_for_message(bot.api, result_bytes, message.peer_id)
-        await message.answer(f"Вот как выглядит «{item.name}» 💍", attachment=attachment)
-    except Exception:
-        # Загрузка готового фото обратно в ВК — отдельный сетевой шаг (может
-        # споткнуться о временный сбой VK API даже когда сама примерка уже
-        # посчиталась). Без этого except бот падал молча и не отвечал вовсе,
-        # плюс пользователь навсегда застревал в состоянии "жду фото".
-        logger.exception("Не удалось отправить результат примерки для %s", item.id)
+        position = await tryon_queue.enqueue(job)
+    except DuplicateTryOnJob:
         await message.answer(
-            "Примерка получилась, но не вышло отправить фото обратно 🙁 "
-            "Попробуйте прислать это же фото ещё раз."
+            "Ваше фото уже в очереди на примерку. Дождитесь результата перед отправкой нового."
+        )
+        return
+    except TryOnQueueFull:
+        logger.warning("Очередь примерок переполнена, peer_id=%s", message.peer_id)
+        await message.answer(
+            "Сейчас слишком много примерок в очереди 🙁 Попробуйте отправить фото чуть позже."
         )
         return
 
-    await bot.state_dispenser.delete(message.peer_id)
+    if position == 1:
+        await message.answer("Фото принято ✨ Начинаю примерку.")
+    else:
+        await message.answer(
+            f"Фото принято ✨ Вы №{position} в очереди. "
+            "Результат пришлю автоматически, пересылать фото ещё раз не нужно."
+        )
