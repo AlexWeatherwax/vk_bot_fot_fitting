@@ -1,5 +1,15 @@
-.env
-.git
-__pycache__
-data/tmp
-data/models
+# Runtime-only build context. Calibration/import/editor files stay local.
+*
+!requirements.txt
+!requirements.lock.txt
+!run.py
+!bot/
+!bot/**
+
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+bot/jewelry/gallery/.editor-backups/
+bot/jewelry/gallery/.editor-staging/
+bot/jewelry/gallery/.editor.lock
+bot/jewelry/gallery/imladris/_ready_no_category/

@@ -16,12 +16,14 @@ def test_entrypoint_runs_bot_once_from_other_directory(tmp_path, entry):
     script = '''
 import runpy
 import sys
+from pathlib import Path
 from types import ModuleType, SimpleNamespace
 
 project, entry = sys.argv[1:]
 sys.path.insert(0, project)
 class Bot:
-    def __init__(self, token):
+    def __init__(self, token, polling):
+        self.polling = polling
         self.labeler = SimpleNamespace(load=lambda label: None)
     def run(self):
         print("BOT_STARTED")
@@ -33,7 +35,15 @@ vk_bot.Bot = Bot
 sys.modules.update({"vkbottle": vk, "vkbottle.bot": vk_bot})
 config = ModuleType("bot.config")
 config.config = SimpleNamespace(log_level="INFO", vk_token="test", group_id=1)
+# The real app creates its consent store under BASE_DIR/data. Keep that write
+# in this subprocess's temporary working directory, never in the real project.
+config.BASE_DIR = Path.cwd()
 sys.modules["bot.config"] = config
+runtime = ModuleType("bot.runtime")
+runtime.configure_logging = lambda level: None
+runtime.StatefulBotPolling = lambda state_dir, **kwargs: SimpleNamespace(
+    state_dir=state_dir, **kwargs)
+sys.modules["bot.runtime"] = runtime
 for name in ("catalog", "common", "photo"):
     module = ModuleType("bot.handlers." + name)
     setattr(module, name + "_labeler", object())

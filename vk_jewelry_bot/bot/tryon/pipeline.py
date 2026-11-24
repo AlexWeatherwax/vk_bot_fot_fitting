@@ -4,18 +4,25 @@
 накладывает картинку украшения через compose.overlay_image.
 """
 import io
+import math
+import copy
 from pathlib import Path
+from types import SimpleNamespace
 
 import cv2
 import numpy as np
 from PIL import Image
 
-from ..jewelry.models import Category, JewelryItem
+from ..jewelry.models import Category, JewelryItem, item_photo_instruction
+from ..jewelry.selection import validate_components
 from . import landmarks_face as face_mod
 from . import landmarks_hand as hand_mod
 from . import landmarks_pose as pose_mod
 from .compose import overlay_image
 from .ear_segmentation import earring_points
+from . import hair_placement
+from . import neck_placement
+from .image_input import load_photo
 
 
 from .errors import TryOnError
@@ -47,6 +54,9 @@ PENDANT_LENGTH_FRACTION = 0.24   # длина подвеса / ширина пл
 # лежит на груди, а не под подбородком. Замерено по калибровочным фото.
 PENDANT_DROP = 0.30
 CHAIN_WIDTH_FRACTION = 0.32      # ширина цепочки / ширина плеч ≈ ширина шеи
+CHAIN_NECK_RISE = 0.15          # концы цепочки выше основания шеи
+CHAIN_CHIN_CLEARANCE = 0.03     # отступ ниже подбородка / ширина лица
+CHAIN_NECK_OVERSHOOT = 1.05    # концы слегка заходят за измеренный край шеи
 # Колье масштабируется по ширине шеи, а не плеч: тогда его концы приходятся
 # на края шеи и читаются как уходящие за неё.
 BEADS_NECK_OVERSHOOT = 1.15
@@ -62,6 +72,14 @@ BRACELET_LENGTH_FRACTION = 1.15  # длина браслета / ширина з
 # смотрится правдоподобно на всех 9, но не проверено на разных типах ушей/
 # причёсок за пределами одного калибровочного фото.
 KAFFY_LENGTH_FRACTION = 0.32
+
+
+def _item_anchor(item, default, *, mirrored=False):
+    """Item coordinates belong to its original PNG, including its padding."""
+    anchor = getattr(item, "overlay_anchor", None)
+    if anchor is None:
+        return default
+    return (1.0 - anchor[0], anchor[1]) if mirrored else tuple(anchor)
 
 
 def _width_for_length(overlay: Image.Image, target_length: float) -> float:
@@ -104,11 +122,39 @@ def apply_tryon(item: JewelryItem, overlay_path: Path, base_image_bytes: bytes) 
     Бросает TryOnError с понятным пользователю текстом, если нужные части
     тела не удалось найти на фото.
     """
-    base = Image.open(io.BytesIO(base_image_bytes))
-    # На всякий случай учитываем EXIF-ориентацию с телефонов.
-    base = _apply_exif_orientation(base).convert("RGB")
+    return apply_tryon_many([item], [overlay_path], base_image_bytes)
+
+
+def apply_tryon_many(
+    items: list[JewelryItem], overlay_paths: list[Path], base_image_bytes: bytes
+) -> bytes:
+    """Накладывает совместимые украшения на одно фото без промежуточных JPEG.
+
+    Детекторы всегда получают исходный снимок, поэтому уже наложенные серьги
+    или диадема не мешают определять точки для следующего украшения.
+    Наборы должны быть заранее развёрнуты в отдельные изделия.
+    """
+    items, overlay_paths = list(items), list(overlay_paths)
+    try:
+        validate_components(items)
+    except ValueError as exc:
+        raise TryOnError(str(exc)) from exc
+    if any(item.category == Category.SET for item in items):
+        raise TryOnError("Для примерки набора нужны отдельные изображения его украшений.")
+    if len(items) != len(overlay_paths):
+        raise TryOnError("Для каждого украшения нужно указать изображение.")
+    base = load_photo(base_image_bytes)
     np_bgr = _to_bgr(base)
-    overlay_img = _load_rgba(overlay_path)
+    for item, overlay_path in zip(items, overlay_paths):
+        overlay_img = _load_rgba(overlay_path)
+        base = _apply_item(base, overlay_img, np_bgr, item)
+
+    out = io.BytesIO()
+    base.convert("RGB").save(out, format="JPEG", quality=92)
+    return out.getvalue()
+
+
+def _apply_item(base, overlay_img, np_bgr, item: JewelryItem):
 
     if item.category == Category.EARRINGS:
         base = _apply_earrings(base, overlay_img, np_bgr, item)
@@ -129,9 +175,7 @@ def apply_tryon(item: JewelryItem, overlay_path: Path, base_image_bytes: bytes) 
     else:  # pragma: no cover - защитная ветка на случай новой категории
         raise TryOnError("Неизвестная категория украшения.")
 
-    out = io.BytesIO()
-    base.convert("RGB").save(out, format="JPEG", quality=92)
-    return out.getvalue()
+    return base
 
 
 def _apply_exif_orientation(image: Image.Image) -> Image.Image:
@@ -247,7 +291,7 @@ def _apply_earrings(base, overlay_img, np_bgr, item: JewelryItem):
              mid[1] + anchors.face_width * item.offset_y),
             _width_for_length(overlay_img, target_length * PAIR_FALLBACK_FACTOR),
             anchors.tilt_angle + item.rotation_offset,
-            overlay_anchor=(0.5, 0.05),
+            overlay_anchor=_item_anchor(item, (0.5, 0.05)),
         )
     elif item.single_ear:
         # Несимметричная моно-серьга — только одно ухо, без зеркалирования.
@@ -261,13 +305,17 @@ def _apply_earrings(base, overlay_img, np_bgr, item: JewelryItem):
     for side, point, ov in sides:
         ox = point[0] + anchors.face_width * item.offset_x * side
         oy = point[1] + anchors.face_width * item.offset_y
+        local_anchor = _item_anchor(item, (0.5, 0.05),
+                                    mirrored=(side == 1 and not item.pair_image))
+        if pair is not None and item.pair_overlay_anchors is not None:
+            local_anchor = item.pair_overlay_anchors[0 if side == -1 else 1]
         base = overlay_image(
             base,
             ov,
             (ox, oy),
             _width_for_length(ov, target_length),
             anchors.tilt_angle + item.rotation_offset,
-            overlay_anchor=(0.5, 0.05),  # верх картинки — крючок серьги
+            overlay_anchor=local_anchor,
         )
     return base
 
@@ -276,8 +324,7 @@ def _apply_kaffy(base, overlay_img, np_bgr, item: JewelryItem):
     anchors = face_mod.get_face_anchors(np_bgr)
     if anchors is None:
         raise TryOnError(
-            "Не нашла лицо на фото 🙁 Пришлите фото в профиль или в три "
-            "четверти с открытым ухом и хорошим освещением."
+            "Не нашла лицо на фото 🙁 " + item_photo_instruction(item)
         )
 
     side = -1 if item.kaffy_side != "right" else 1
@@ -301,7 +348,7 @@ def _apply_kaffy(base, overlay_img, np_bgr, item: JewelryItem):
         # см. JewelryItem.kaffy_anchor_y. У каффов с длинными подвесами на
         # цепочках гроздь заканчивается заметно раньше низа картинки; общая
         # доля 0.8 на них садила на мочку подвеску, а не гроздь.
-        overlay_anchor=(0.5, item.kaffy_anchor_y),
+        overlay_anchor=_item_anchor(item, (0.5, item.kaffy_anchor_y)),
     )
 
 
@@ -323,17 +370,33 @@ def _apply_diadem(base, overlay_img, np_bgr, item: JewelryItem):
         point,
         width,
         anchors.tilt_angle + item.rotation_offset,
-        overlay_anchor=(0.5, 0.9),  # низ картинки — основание диадемы
+        overlay_anchor=_item_anchor(item, (0.5, 0.9)),
     )
 
 
 def _apply_hairpin(base, overlay_img, np_bgr, item: JewelryItem):
     anchors = face_mod.get_face_anchors(np_bgr)
-    if anchors is None:
+    if anchors is None and item.hairpin_style != "bun":
         raise TryOnError(
             "Не нашла лицо на фото 🙁 Пришлите селфи анфас, чтобы в кадр "
             "целиком попала макушка."
         )
+
+    if item.hairpin_style == "bun":
+        placement = hair_placement.detect_bun(np_bgr, anchors)
+        fraction = getattr(item, "hairpin_head_fraction", None)
+        length = hair_placement.ornament_length(overlay_img, fraction)
+        width = overlay_img.width / length * placement.radius * 1.35 * item.anchor_scale
+        point = (placement.point[0] + placement.face_width * item.offset_x,
+                 placement.point[1] + placement.face_width * item.offset_y)
+        angle = placement.angle + item.rotation_offset
+        anchor = _item_anchor(item, (0.5, fraction if fraction is not None else 0.5))
+        visible, shaft = hair_placement.insertion_layers(overlay_img, fraction)
+        # Keep the public renderer here: the calibration editor traces this
+        # exact anchor and scale instead of displaying a separate mockup.
+        rendered = overlay_image(base, visible, point, width, angle, overlay_anchor=anchor)
+        return hair_placement.occlude_entry(base, rendered, shaft, placement,
+                                            point, width, angle, anchor)
 
     target_length = anchors.face_width * HAIRPIN_LENGTH_FRACTION * item.anchor_scale
 
@@ -368,7 +431,7 @@ def _apply_hairpin(base, overlay_img, np_bgr, item: JewelryItem):
         point,
         _width_for_length(overlay_img, target_length),
         anchors.tilt_angle + item.rotation_offset,
-        overlay_anchor=overlay_anchor,
+        overlay_anchor=_item_anchor(item, overlay_anchor),
     )
 
 
@@ -392,7 +455,7 @@ def _apply_brooch(base, overlay_img, np_bgr, item: JewelryItem):
         point,
         _width_for_length(overlay_img, anchors.shoulder_width * BROOCH_LENGTH_FRACTION * item.anchor_scale),
         anchors.tilt_angle + item.rotation_offset,
-        overlay_anchor=(0.5, 0.5),
+        overlay_anchor=_item_anchor(item, (0.5, 0.5)),
     )
 
 
@@ -417,7 +480,7 @@ def _apply_bracelet(base, overlay_img, np_bgr, item: JewelryItem):
         point,
         width,
         anchors.angle + item.rotation_offset,
-        overlay_anchor=(0.5, 0.5),
+        overlay_anchor=_item_anchor(item, (0.5, 0.5)),
     )
 
 
@@ -436,6 +499,69 @@ def _load_chain(color: str) -> Image.Image | None:
             return None
         _CHAIN_CACHE[color] = Image.open(path).convert("RGBA")
     return _CHAIN_CACHE[color]
+
+
+def _neck_chain_height(anchors, point, face):
+    """Fit the chain above its attachment, with its ends below the chin.
+
+    Project onto the body's down axis so shoulder tilt and saved global XY
+    offsets affect the length in the same coordinates as the editor.
+    """
+    down = anchors.down
+    project = lambda xy: xy[0] * down[0] + xy[1] * down[1]
+    # Measured lateral neck skin can start above the chin. In that case the
+    # face/hair mask hides the chain behind the jaw, as a real necklace does.
+    if getattr(anchors, "chain_top", None) is not None:
+        return project(point) - project(anchors.chain_top)
+    top = project(anchors.neck_point)
+    chin = getattr(face, "chin", None)
+    if chin is not None:
+        top = max(
+            top - anchors.shoulder_width * CHAIN_NECK_RISE,
+            project(chin) + max(2.0, face.face_width * CHAIN_CHIN_CLEARANCE),
+        )
+    # Without a visible face, stay at the detected neck base rather than
+    # guessing an upper endpoint that could reach the face.
+    return project(point) - top
+
+
+def _fit_neck_chain(chain, width, height):
+    # Width and drop are independent body measurements. Scaling a tall asset
+    # uniformly by neck width used to extend it over the cheeks.
+    return chain.resize(
+        (max(1, round(width)), max(1, math.floor(height + 0.5))), Image.Resampling.LANCZOS,
+    )
+
+
+def _pendant_frame(anchors, face, np_bgr):
+    frame = SimpleNamespace(anchors=anchors, placement=None, occlusion_mask=None)
+    if (np_bgr is None or face is None
+            or not hasattr(face, "chin") or not hasattr(face, "forehead_top")):
+        return frame
+    try:
+        masks = hair_placement.segment_features(np_bgr)
+    except TryOnError:
+        masks = {}
+    placement = neck_placement.locate_neck(masks.get("body_skin"), face, anchors)
+    corrected = copy.copy(anchors)
+    corrected.neck_point = (placement.center[0], anchors.neck_point[1])
+    corrected.neck_width = placement.width
+    corrected.chain_top = placement.top
+    frame.anchors, frame.placement = corrected, placement
+    if "face" in masks and "hair" in masks:
+        # Clip chain tails outside the person as well as behind jaw and hair.
+        # This lets the ends disappear at the neck silhouette instead of
+        # floating beyond it when an item has a saved horizontal adjustment.
+        hidden = masks["face"] + masks["hair"] + masks.get("background", 0)
+        frame.occlusion_mask = np.clip((hidden - .2) / .6, 0, 1)
+    return frame
+
+
+def _occlude_neck_chain(layer, confidence):
+    layer = layer.copy()
+    alpha = np.asarray(layer.getchannel("A"), dtype=np.float32)
+    layer.putalpha(Image.fromarray(np.rint(alpha * (1 - confidence)).astype(np.uint8)))
+    return layer
 
 
 def _apply_neck_item(base, overlay_img, np_bgr, item: JewelryItem):
@@ -464,9 +590,13 @@ def _apply_neck_item(base, overlay_img, np_bgr, item: JewelryItem):
             point,
             width,
             anchors.tilt_angle + item.rotation_offset,
-            overlay_anchor=(0.5, 0.0),
+            overlay_anchor=_item_anchor(item, (0.5, 0.0)),
         )
 
+    face = face_mod.get_face_anchors(np_bgr)
+    frame = _pendant_frame(anchors, face, np_bgr)
+    anchors = frame.anchors
+    down = anchors.down
     # Кулон висит на цепочке ниже шеи — на груди.
     drop = anchors.shoulder_width * PENDANT_DROP
     point = (
@@ -478,14 +608,21 @@ def _apply_neck_item(base, overlay_img, np_bgr, item: JewelryItem):
     # расходятся на ширину шеи и уходят за неё.
     chain_img = _load_chain(item.chain_color)
     if chain_img is not None:
-        base = overlay_image(
-            base,
+        width = (frame.placement.width * CHAIN_NECK_OVERSHOOT if frame.placement is not None
+                 else anchors.shoulder_width * CHAIN_WIDTH_FRACTION)
+        height = _neck_chain_height(anchors, point, face)
+        chain_img = _fit_neck_chain(chain_img, width, height)
+        chain_base = (Image.new("RGBA", base.size) if frame.occlusion_mask is not None else base)
+        layer = overlay_image(
+            chain_base,
             chain_img,
             point,
-            anchors.shoulder_width * CHAIN_WIDTH_FRACTION,
+            chain_img.width,
             anchors.tilt_angle,
             overlay_anchor=(0.5, _CHAIN_DIP_FRACTION),
         )
+        base = (Image.alpha_composite(base.convert("RGBA"), _occlude_neck_chain(layer, frame.occlusion_mask))
+                if frame.occlusion_mask is not None else layer)
 
     return overlay_image(
         base,
@@ -494,7 +631,7 @@ def _apply_neck_item(base, overlay_img, np_bgr, item: JewelryItem):
         _width_for_length(overlay_img, anchors.shoulder_width * PENDANT_LENGTH_FRACTION
                           * item.anchor_scale),
         anchors.tilt_angle + item.rotation_offset,
-        overlay_anchor=(0.5, 0.0),
+        overlay_anchor=_item_anchor(item, (0.5, 0.0)),
     )
 
 
@@ -516,5 +653,5 @@ def _apply_ring(base, overlay_img, np_bgr, item: JewelryItem):
         point,
         width,
         anchors.angle + item.rotation_offset,
-        overlay_anchor=(0.5, 0.5),
+        overlay_anchor=_item_anchor(item, (0.5, 0.5)),
     )

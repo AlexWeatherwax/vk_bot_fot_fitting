@@ -32,12 +32,12 @@ FONT_PATH = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"
 
 # Какое калибровочное фото осмысленно для какой категории.
 PHOTO_FOR = {
-    Category.EARRINGS: ["1000013929.jpg", "1000013931.jpg"],
-    Category.DIADEM: ["1000013931.jpg", "1000013932.jpg"],
-    Category.HAIRPIN: ["1000013931.jpg", "1000013932.jpg"],
-    Category.PENDANT: ["1000013928.jpg", "1000013930.jpg"],
-    Category.BEADS: ["1000013928.jpg", "1000013930.jpg"],
-    Category.BROOCH: ["1000013928.jpg", "1000013930.jpg"],
+    Category.EARRINGS: ["анфас-v3/reference-front.jpg"],
+    Category.DIADEM: ["анфас-v3/reference-front.jpg"],
+    Category.HAIRPIN: ["анфас-v3/reference-front.jpg"],
+    Category.PENDANT: ["анфас-v3/reference-front.jpg"],
+    Category.BEADS: ["анфас-v3/reference-front.jpg"],
+    Category.BROOCH: ["анфас-v3/reference-front.jpg"],
     Category.RING: ["1000013933.jpg", "1000013934.jpg"],
     Category.BRACELET: ["1000013933.jpg", "1000013934.jpg"],
     # Кафф сидит на ушной раковине — анфас его не видно, нужен профиль/3-4.

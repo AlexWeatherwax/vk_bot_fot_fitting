@@ -1,0 +1,31 @@
+[Unit]
+Description=Imladris jewelry author editor
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/etc/imladris/editor.env
+
+[Service]
+Type=simple
+User=jewelry
+Group=jewelry
+WorkingDirectory=/opt/vk_jewelry_bot
+EnvironmentFile=/etc/imladris/editor.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=ORT_DISABLE_TELEMETRY=1
+Environment=XDG_CACHE_HOME=/opt/vk_jewelry_bot/data/cache
+Environment=MPLCONFIGDIR=/opt/vk_jewelry_bot/data/cache/matplotlib
+ExecStart=/opt/vk_jewelry_bot/.venv/bin/python -m uvicorn jewelry_editor.app:app --host 127.0.0.1 --port 8765 --workers 1
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/vk_jewelry_bot/bot/jewelry/gallery /opt/vk_jewelry_bot/data
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

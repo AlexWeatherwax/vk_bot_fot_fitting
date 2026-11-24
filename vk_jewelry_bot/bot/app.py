@@ -24,18 +24,27 @@ if __name__ == "__main__" and not __package__:
 
 from vkbottle.bot import Bot
 
-from .config import config
+from .config import BASE_DIR, config
+from .consent import ConsentGate
+from .consent_store import ConsentStore
+from .session_store import SessionStore
+from .sessions import SessionGate
+from .runtime import StatefulBotPolling, configure_logging
+
+configure_logging(config.log_level)
+
 from .handlers.catalog import catalog_labeler
 from .handlers.common import common_labeler
 from .handlers.photo import photo_labeler
 
-logging.basicConfig(
-    level=config.log_level,
-    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
-)
 logger = logging.getLogger("vk_jewelry_bot")
 
-bot = Bot(token=config.vk_token)
+bot = Bot(
+    token=config.vk_token,
+    polling=StatefulBotPolling(BASE_DIR / "data" / "polling", group_id=config.group_id),
+)
+consent_gate = ConsentGate(ConsentStore(BASE_DIR / "data" / "consent" / "consent.sqlite3"), config.group_id)
+session_gate = SessionGate(SessionStore(BASE_DIR / "data" / "sessions" / "sessions.sqlite3"), config.group_id)
 
 bot.labeler.load(photo_labeler)
 bot.labeler.load(common_labeler)

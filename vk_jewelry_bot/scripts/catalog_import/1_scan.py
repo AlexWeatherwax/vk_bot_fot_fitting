@@ -14,6 +14,8 @@ IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 
 
 def main() -> None:
+    if not SOURCE_DIR.is_dir():
+        raise SystemExit("Для повторного импорта поместите исходные фотографии в папку «Украшения» рядом с vk_jewelry_bot. Рабочий бот не требует этих исходников.")
     items = []
     skipped_empty = []
     for folder in sorted(SOURCE_DIR.iterdir()):

@@ -5,7 +5,9 @@ services:
     env_file: .env
     restart: unless-stopped
     volumes:
-      # чтобы можно было добавлять/менять украшения без пересборки образа
-      - ./bot/jewelry/gallery:/app/bot/jewelry/gallery
-      - ./data/tmp:/app/data/tmp
+      # Редактор обновляет файлы на хосте; боту нужен только доступ на чтение.
+      - ./bot/jewelry/gallery:/app/bot/jewelry/gallery:ro
       - ./data/models:/app/data/models:ro
+      # Согласия должны переживать пересоздание контейнера.
+      - ./data/consent:/app/data/consent:rw
+      - ./data/sessions:/app/data/sessions:rw

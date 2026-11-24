@@ -46,6 +46,50 @@ def test_busy_does_not_spawn_worker(monkeypatch):
         service._SLOT.release()
 
 
+def test_multiple_items_share_one_worker_and_original_photo(monkeypatch, tmp_path):
+    pendant = JewelryItem('pendant', 'Кулон', Category.PENDANT, 'pendant.png')
+    calls = []
+
+    def run(command, **kwargs):
+        calls.append(command)
+        request = json.loads(kwargs['input'])
+        assert [item['id'] for item in request['items']] == ['test', 'pendant']
+        assert request['overlays'] == [str(tmp_path/'earrings.png'), str(tmp_path/'pendant.png')]
+        assert base64.b64decode(request['photo']) == b'original-photo'
+        return SimpleNamespace(returncode=0, stdout=json.dumps({'photo': base64.b64encode(b'combined-jpeg').decode()}))
+
+    monkeypatch.setattr(service.subprocess, 'run', run)
+    result = service.apply_tryon_many(
+        [ITEM, pendant], [tmp_path/'earrings.png', tmp_path/'pendant.png'], b'original-photo'
+    )
+    assert result == b'combined-jpeg'
+    assert len(calls) == 1
+
+
+@pytest.mark.parametrize('items,paths', [
+    ([ITEM, JewelryItem('other', 'Другие серьги', Category.EARRINGS, 'other.png')], ['a.png', 'b.png']),
+    ([ITEM, JewelryItem('ring', 'Кольцо', Category.RING, 'ring.png')], ['a.png', 'b.png']),
+    ([ITEM], []),
+    ([], []),
+])
+def test_invalid_selection_does_not_spawn_worker(monkeypatch, items, paths):
+    def unexpected_run(*args, **kwargs):
+        pytest.fail('Invalid selection must be rejected before starting native inference')
+    monkeypatch.setattr(service.subprocess, 'run', unexpected_run)
+    with pytest.raises(service.TryOnError):
+        service.apply_tryon_many(items, paths, b'photo')
+
+
+def test_combined_worker_error_releases_slot(monkeypatch):
+    pendant = JewelryItem('pendant', 'Кулон', Category.PENDANT, 'pendant.png')
+    def run(*args, **kwargs):
+        return SimpleNamespace(returncode=0, stdout=json.dumps({'error': 'Не видна шея'}))
+    monkeypatch.setattr(service.subprocess, 'run', run)
+    for _ in range(2):
+        with pytest.raises(service.TryOnError, match='Не видна шея'):
+            service.apply_tryon_many([ITEM, pendant], ['earrings.png', 'pendant.png'], b'photo')
+
+
 def test_model_corruption_is_rejected(tmp_path):
     import hashlib
     path = tmp_path/'model'

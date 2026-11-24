@@ -43,12 +43,12 @@ FONT_PATH = "/System/Library/Fonts/Supplemental/Arial Unicode.ttf"
 # Какое пробное фото и какую часть тела показывать для каждой категории.
 # "face" — лицо целиком, "torso" — шея и плечи, "hand" — кисть, "ear" — ухо крупным планом.
 SETUP = {
-    Category.EARRINGS: ("1000013931.jpg", "face"),
-    Category.DIADEM:   ("1000013931.jpg", "face"),
-    Category.HAIRPIN:  ("1000013931.jpg", "face"),
-    Category.PENDANT:  ("1000013928.jpg", "torso"),
-    Category.BEADS:    ("1000013928.jpg", "torso"),
-    Category.BROOCH:   ("1000013928.jpg", "torso"),
+    Category.EARRINGS: ("анфас-v3/reference-front.jpg", "face"),
+    Category.DIADEM:   ("анфас-v3/reference-front.jpg", "face"),
+    Category.HAIRPIN:  ("анфас-v3/reference-front.jpg", "face"),
+    Category.PENDANT:  ("анфас-v3/reference-front.jpg", "torso"),
+    Category.BEADS:    ("анфас-v3/reference-front.jpg", "torso"),
+    Category.BROOCH:   ("анфас-v3/reference-front.jpg", "torso"),
     Category.RING:     ("1000013934.jpg", "hand"),
     Category.BRACELET: ("1000013934.jpg", "hand"),
     Category.KAFFY:    ("1000013935_profil_ukho_kaffy.jpg", "ear"),

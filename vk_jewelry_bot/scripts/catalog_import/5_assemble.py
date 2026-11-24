@@ -1,5 +1,10 @@
 """
-Шаг 5 — разложить готовые PNG по галерее бота и обновить manifest.json.
+Исторический шаг 5 — первичная сборка необработанного каталога.
+
+Обычный импорт принятых изображений: 8_integrate_curated.py --apply.
+Этот старый алгоритм сбрасывает подстройку и потому требует явного
+--allow-legacy-rebuild. Перед таким запуском сохраняется отдельная копия
+текущей галереи; исходная gallery_backup остаётся нетронутой.
 
 Что делает:
 - для товаров, которые уже есть в каталоге (см. mapping.REPLACES), заменяет
@@ -23,6 +28,8 @@ from __future__ import annotations
 
 import json
 import shutil
+import argparse
+from datetime import datetime, timezone
 
 from mapping import ENTRY_OVERRIDES, REPLACES, display_name
 from paths import CUTOUT_DIR, GALLERY_DIR, MANIFEST_PATH, PICKS_JSON, WORK_DIR
@@ -55,6 +62,18 @@ def base_entry(category: str) -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--allow-legacy-rebuild", action="store_true",
+                        help="Опасно: заменить каталог историческими cutout и сбросить калибровку")
+    args = parser.parse_args()
+    if not args.allow_legacy_rebuild:
+        parser.error("Сборка остановлена: она сбрасывает принятую калибровку. "
+                     "Используйте 8_integrate_curated.py --apply; исторический "
+                     "путь доступен только с --allow-legacy-rebuild.")
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
+    snapshot = WORK_DIR / "legacy_rebuild_history" / stamp
+    shutil.copytree(GALLERY_DIR, snapshot)
+    print("Копия каталога перед исторической пересборкой:", snapshot)
     picks = {p["key"]: p for p in json.loads(PICKS_JSON.read_text(encoding="utf-8"))}
     report = json.loads((WORK_DIR / "cutout_report.json").read_text(encoding="utf-8"))
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))

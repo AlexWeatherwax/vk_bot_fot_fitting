@@ -7,8 +7,9 @@ REPO_ROOT = PROJECT_ROOT.parent              # папка, где лежат и 
 
 # Исходная папка с фотографиями (имя с висящим пробелом — так её создали).
 SOURCE_DIR = next(
-    p for p in sorted(REPO_ROOT.iterdir())
-    if p.is_dir() and p.name.strip().lower() == "украшения"
+    (p for p in sorted(REPO_ROOT.iterdir())
+     if p.is_dir() and p.name.strip().lower() == "украшения"),
+    REPO_ROOT / "Украшения",
 )
 
 WORK_DIR = HERE / "work"

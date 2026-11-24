@@ -71,5 +71,7 @@ def overlay_image(
     paste_y = round(anchor_xy[1] - anchor_in_rotated[1])
 
     layer = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    layer.paste(rotated, (paste_x, paste_y), rotated)
+    # Preserve straight RGBA here. Passing alpha as a paste mask would apply
+    # it again during alpha_composite and darken translucent ornament edges.
+    layer.paste(rotated, (paste_x, paste_y))
     return Image.alpha_composite(base, layer)

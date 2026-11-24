@@ -1,1 +1,119 @@
-<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Редактор украшений</title><link rel="stylesheet" href="static/style.css"><body><h1>Редактор украшений</h1><main><section><label>Каталог<select id="existing"></select></label><button id="load">Открыть</button><button id="new">Новое</button><button id="refresh">Обновить список</button><label>Название<input id="name" maxlength="160"></label><p id="duplicate"></p><label>Категория<select id="category"></select></label><label>Украшение без фона<input type="file" id="jewelry" accept="image/png,image/webp"></label><label><input type="checkbox" id="crop" checked>Обрезать прозрачные поля при загрузке</label><label>Серьги<select id="earMode"><option value="single">Одна → отразить на второе ухо</option><option value="pair">Пара на картинке</option><option value="mono">Моно-серьга</option></select></label><div id="fields"></div><button id="preview">Предпросмотр</button><hr><label><input type="checkbox" id="confirm">Подтверждаю обновление существующего украшения</label><button id="save">Сохранить</button><p id="status" role="status"></p></section><section><label>Другое фото модели<input type="file" id="photo" accept="image/jpeg,image/png,image/webp"></label><p>Перетащите синюю метку. После отпускания сервер перерисует украшение. Масштаб и поворот — слева.</p><p>По умолчанию — ваше фото уха. Для рук, плеч и макушки загрузите подходящие фото.</p><canvas id="canvas"></canvas><p id="renderStatus" role="status"></p></section></main><script src="static/app.js" defer></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Имладрис: мастерская эльфийских украшений</title>
+  <meta name="description" content="Мастерская автора Имладрис: каталог эльфийских украшений и интерактивная примерка на фото.">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./transforms.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="./index.html" aria-label="Имладрис: мастерская эльфийских украшений">
+      <svg class="brand-emblem" width="52" height="64" viewBox="0 0 64 76" fill="none" aria-hidden="true">
+        <path d="M32 3C23 16 8 22 8 39c0 16 13 25 24 34 11-9 24-18 24-34C56 22 41 16 32 3Z" stroke="currentColor" stroke-width="1.25"/>
+        <path d="M32 10c-7 13-18 18-18 30 0 12 9 20 18 27 9-7 18-15 18-27 0-12-11-17-18-30Z" stroke="currentColor" stroke-width=".6" opacity=".55"/>
+        <path d="M32 61V22m0 28C20 49 18 43 19 37c8 0 13 5 13 13Zm0-10c11-1 14-7 13-13-8 0-13 5-13 13Zm0 18c9-1 13-5 13-11-7 0-12 4-13 11Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m32 14 2 4-2 4-2-4 2-4Z" fill="currentColor"/>
+      </svg>
+      <span><span class="brand-title">Имладрис</span><small class="brand-subtitle">мастерская эльфийских украшений</small></span>
+    </a>
+    <div class="header-context"><span class="header-label">ПРОСТРАНСТВО АВТОРА</span><span class="header-note">Каталог и виртуальная примерка</span></div>
+    <span class="save-state" id="saveState" role="status">Выберите украшение</span>
+  </header>
+  <main class="workbench">
+    <aside class="catalog-panel" aria-label="Каталог украшений">
+      <div class="panel-heading"><h1>Каталог украшений</h1><span class="count" id="catalogCount">—</span></div>
+      <button class="button primary new-button" id="new" type="button"><span aria-hidden="true">＋</span> Новое украшение</button>
+      <label class="search-field"><span class="sr-only">Поиск по названию</span><input id="catalogSearch" type="search" placeholder="Поиск по названию" autocomplete="off"></label>
+      <label class="filter-field"><span class="sr-only">Категория каталога</span><select id="catalogFilter"><option value="">Все категории</option></select></label>
+      <div class="catalog-list" id="catalogList" aria-live="polite"><p class="empty-list">Загружаем каталог…</p></div>
+      <button class="button quiet refresh-button" id="refresh" type="button">Обновить каталог</button>
+    </aside>
+
+    <section class="workspace" aria-label="Примерка на референс">
+      <div class="workspace-heading">
+        <div><p class="eyebrow">ПРИМЕРОЧНАЯ АВТОРА</p><h2 id="workspaceTitle">Новое украшение</h2></div>
+        <span class="mode-badge" id="modeBadge">Черновик</span>
+      </div>
+      <div class="reference-bar">
+        <label><span class="sr-only">Фото для примерки</span><select id="reference"><option value="">Загружаем референсы…</option></select></label>
+        <label class="button secondary file-button" for="photo">Загрузить своё фото<input type="file" id="photo" accept="image/jpeg,image/png,image/webp"></label>
+      </div>
+      <div class="canvas-shell" id="canvasShell">
+        <canvas id="canvas" width="900" height="1000" tabindex="0" aria-label="Фото для примерки. Перетащите украшение; угловые метки меняют размер, круглая метка сверху — поворот."></canvas>
+        <div class="canvas-empty" id="canvasEmpty"><span class="empty-gem" aria-hidden="true">◇</span><h3>Место для нового образа</h3><p>Загрузите украшение на прозрачном фоне.<br>Оно появится на фото для подгонки.</p></div>
+        <div class="canvas-loading" id="canvasLoading" hidden><span class="spinner"></span><span>Готовим примерку…</span></div>
+      </div>
+      <div class="canvas-tools">
+        <div class="tool-buttons">
+          <button class="button secondary" id="undo" type="button" disabled title="Отменить последнюю подгонку">Отменить</button>
+          <button class="button quiet" id="resetFit" type="button" disabled>Сбросить подгонку</button>
+          <button class="button quiet" id="toggleHandles" type="button" aria-pressed="true">Скрыть метки</button>
+        </div>
+        <button class="button quiet" id="preview" type="button" disabled>Обновить примерку</button>
+      </div>
+      <p class="canvas-hint" id="canvasHint"><span class="hint-key">↔</span> Тяните украшение для перемещения, угол рамки — для размера, круглую метку — для поворота.</p>
+      <p class="render-status" id="renderStatus" role="status" aria-live="polite"></p>
+    </section>
+
+    <aside class="inspector" aria-label="Параметры украшения">
+      <div class="inspector-heading"><p class="eyebrow">КАРТОЧКА УКРАШЕНИЯ</p><h2 id="inspectorTitle">Создайте своё</h2></div>
+      <div class="set-notice" id="setNotice" hidden>
+        <h3 id="setTitle">Готовый набор</h3>
+        <label class="field">Украшение набора<select id="component"><option value="">Обзор комплекта</option></select></label>
+        <div id="setMetadata">
+          <label class="field">Название набора<input id="setName" maxlength="160"></label>
+          <button class="button secondary" id="renameSet" type="button">Сохранить название набора</button>
+        </div>
+        <p>Выберите часть комплекта, чтобы изменить изображение или подогнать её на фото. Остальные украшения набора сохранят свои настройки.</p>
+      </div>
+      <form id="editorForm" novalidate>
+        <label class="field">Название<input id="name" type="text" maxlength="160" placeholder="Например, Лесная роса" autocomplete="off" required></label>
+        <label class="field">Тип украшения<select id="category" required></select></label>
+        <p class="duplicate-warning" id="duplicate" role="status" hidden></p>
+
+        <label class="upload-zone" id="uploadZone" for="jewelry">
+          <img id="jewelryThumb" alt="Загруженное украшение" hidden>
+          <span class="upload-icon" aria-hidden="true">＋</span>
+          <strong id="uploadTitle">Добавить украшение</strong>
+          <span id="uploadDescription">PNG или WebP с прозрачным фоном</span>
+          <input type="file" id="jewelry" accept="image/png,image/webp">
+        </label>
+        <label class="checkbox-field"><input type="checkbox" id="crop" checked>Обрезать пустые края при загрузке</label>
+
+        <div class="fit-section">
+          <div class="section-title"><h3>Подгонка на фото</h3><span id="fitReady">Параметры сохранятся</span></div>
+          <label class="slider-label" for="anchor_scale">Размер <output id="scaleOutput" for="anchor_scale">100%</output></label>
+          <div class="slider-row"><input id="anchor_scale" type="range" min=".05" max="5" step=".005" value="1"><input id="scaleNumber" class="compact-number" type="number" min="5" max="500" step=".5" value="100" aria-label="Размер в процентах"><span>%</span></div>
+          <label class="slider-label" for="rotation_offset">Поворот <output id="rotationOutput" for="rotation_offset">0°</output></label>
+          <div class="slider-row"><input id="rotation_offset" type="range" min="-180" max="180" step=".1" value="0"><input id="rotationNumber" class="compact-number" type="number" min="-180" max="180" step=".1" value="0" aria-label="Поворот в градусах"><span>°</span></div>
+          <p class="small-note">Положение, размер и угол запоминаются автоматически. Нажмите «Сохранить», когда всё готово.</p>
+        </div>
+        <label class="field" id="earModeField">Как показаны серьги<select id="earMode"><option value="single">Одна серьга — отразить на второе ухо</option><option value="pair">Пара на изображении</option><option value="mono">Моно-серьга</option></select></label>
+        <details class="advanced">
+          <summary>Точные настройки</summary>
+          <div id="fields" class="advanced-fields"></div>
+          <p class="small-note">Поля точки крепления можно оставить пустыми — будет использована стандартная посадка.</p>
+        </details>
+      </form>
+      <div class="inspector-footer">
+        <button class="button primary save-button" id="save" type="button" disabled>Добавить в каталог</button>
+        <p class="save-caption" id="saveCaption">Сохранится украшение и его посадка на фото</p>
+        <button class="button danger" id="delete" type="button" hidden>Удалить из каталога</button>
+        <p class="status-message" id="status" role="status" aria-live="polite"></p>
+      </div>
+    </aside>
+  </main>
+
+  <dialog id="confirmDialog" class="confirm-dialog" aria-labelledby="dialogTitle" aria-describedby="dialogText">
+    <form method="dialog">
+      <span class="dialog-symbol" id="dialogSymbol" aria-hidden="true">◇</span>
+      <h2 id="dialogTitle"></h2><p id="dialogText"></p>
+      <div class="dialog-actions"><button class="button secondary" value="cancel" id="dialogCancel">Отмена</button><button class="button primary" value="confirm" id="dialogConfirm">Продолжить</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

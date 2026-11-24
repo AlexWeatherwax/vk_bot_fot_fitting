@@ -1,0 +1,7 @@
+{
+  "ServerHost": "",
+  "ServerPort": 22,
+  "SshUser": "imladris-editor",
+  "LocalPort": 8765,
+  "RemotePort": 8765
+}

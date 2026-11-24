@@ -1,5 +1,29 @@
-/.DS_Store
-/.venv-import
-/.venv-mp
-/дЃвЃ г™а†и•≠®© Ґ ™†в†ЂЃ£•
-/vk_jewelry_bot/data/models/
+# Local environments and interpreter caches
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv-*/
+.venv-import/
+venv/
+.runtime*/
+
+# Private access, credentials and sessions
+/.imladris-access/
+.env
+.env.*
+!**/.env.example
+*.ses
+*.log
+**/.vkbottle/
+**/.editor-staging/
+**/.editor-backups/
+**/.editor.lock
+
+# Original collection, owner documents and generated bundles stay local
+/Украшения*/
+/Передача заказчику/
+*.zip
+*.tar.gz
+*.tgz

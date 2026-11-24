@@ -1,13 +1,42 @@
+# Configuration and runtime state
 .env
+.env.*
+!.env.example
 .venv/
 venv/
 __pycache__/
-*.pyc
-data/tmp/*
-!data/tmp/.gitkeep
-.DS_Store
+*.py[cod]
 .pytest_cache/
+.DS_Store
+.vkbottle/
+*.ses
+*.log
+/data/
 
-/scripts/catalog_import/work/calibrate/
-/scripts/catalog_import/work/tryon_sheets/
+# Generated import/calibration material
+/scripts/catalog_import/work/
 /scripts/catalog_import/Задание на пересъёмку.pdf
+/jewelry_editor/TEST_REPORT.txt
+/systemd/
+/jewelry_editor/deploy/jewelry-editor.service
+/docs/ARCHITECTURE_AUDIT.md
+/bot/jewelry/gallery/imladris/NEEDS_REVIEW.md
+
+# Keep only synthetic references used by the application and checks
+/фото для калибровки/*
+!/фото для калибровки/README.md
+!/фото для калибровки/1000013933.jpg
+!/фото для калибровки/1000013934.jpg
+!/фото для калибровки/1000013935_profil_ukho_kaffy.jpg
+!/фото для калибровки/анфас-v3/
+!/фото для калибровки/заколки/
+!/фото для калибровки/кулоны/
+!/фото для калибровки/броши/
+/фото для калибровки/анфас-v3/*
+!/фото для калибровки/анфас-v3/reference-front.jpg
+/фото для калибровки/заколки/*
+!/фото для калибровки/заколки/reference-updo.png
+/фото для калибровки/кулоны/*
+!/фото для калибровки/кулоны/reference.jpg
+/фото для калибровки/броши/*
+!/фото для калибровки/броши/reference-blouse.png

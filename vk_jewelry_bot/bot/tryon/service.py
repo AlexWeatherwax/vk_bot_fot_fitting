@@ -7,6 +7,8 @@ from pathlib import Path
 import subprocess
 import sys
 import threading
+from ..jewelry.models import Category
+from ..jewelry.selection import validate_components
 from .errors import TryOnError
 
 _SLOT = threading.BoundedSemaphore(1)
@@ -14,6 +16,20 @@ _PROJECT = Path(__file__).resolve().parents[2]
 
 
 def apply_tryon(item, overlay_path, photo_bytes):
+    return apply_tryon_many([item], [overlay_path], photo_bytes)
+
+
+def apply_tryon_many(items, overlay_paths, photo_bytes):
+    """Render all selected pieces in one isolated inference process."""
+    items, overlay_paths = list(items), list(overlay_paths)
+    try:
+        validate_components(items)
+    except ValueError as exc:
+        raise TryOnError(str(exc)) from exc
+    if any(item.category == Category.SET for item in items):
+        raise TryOnError("Для примерки набора нужны отдельные изображения его украшений.")
+    if len(items) != len(overlay_paths):
+        raise TryOnError("Для каждого украшения нужно указать изображение.")
     if len(photo_bytes) > 20 * 1024 * 1024:
         raise TryOnError("Фото слишком большое: отправьте файл меньше 20 МБ.")
     if not _SLOT.acquire(blocking=False):
@@ -23,7 +39,8 @@ def apply_tryon(item, overlay_path, photo_bytes):
         allowed = {"PATH", "PYTHONPATH", "PYTHONHOME", "LD_LIBRARY_PATH", "LANG", "SYSTEMROOT"}
         env = {k: v for k, v in os.environ.items() if k in allowed or k.startswith("EAR_PARSER_")}
         env["ORT_DISABLE_TELEMETRY"] = "1"
-        request = {"item": asdict(item), "overlay": str(Path(overlay_path).resolve()),
+        request = {"items": [asdict(item) for item in items],
+                   "overlays": [str(Path(path).resolve()) for path in overlay_paths],
                    "photo": base64.b64encode(photo_bytes).decode("ascii")}
         result = subprocess.run([sys.executable, "-m", "bot.tryon.worker"],
                                 cwd=_PROJECT, env=env, input=json.dumps(request),

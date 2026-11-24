@@ -20,11 +20,9 @@ EAR_PARSER_MODEL=data/models/ear-grounded
 Then run:
 
 ```sh
-docker compose build
-# Downloads are setup only; this container never receives VK credentials.
-docker run --rm -v "$PWD/data/models:/app/data/models" --entrypoint python \
-  vk-jewelry-bot:local scripts/download_ear_models.py
-docker compose up -d
+# The downloader uses only Python's standard library and no VK credentials.
+python3 scripts/download_ear_models.py
+docker compose up -d --build
 ```
 
 Alternatively download with `python3 scripts/download_ear_models.py` (Python

@@ -66,3 +66,10 @@ def test_scaling_changes_size_but_not_anchor():
         found = _find_marker(result)
         assert abs(found[0] - anchor[0]) < 2.0
         assert abs(found[1] - anchor[1]) < 2.0
+
+
+def test_translucent_jewelry_alpha_is_applied_once():
+    base = Image.new("RGBA", (40, 40), (0, 0, 255, 255))
+    ornament = Image.new("RGBA", (10, 10), (255, 0, 0, 128))
+    result = overlay_image(base, ornament, (20, 20), 10)
+    assert result.getpixel((20, 20)) == (128, 0, 127, 255)
